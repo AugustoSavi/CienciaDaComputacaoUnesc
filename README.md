@@ -51,3 +51,7 @@
 
 
 Carga Horária Obrigatória: 3.000h Carga Horária Concluída: 1.320h
+
+
+
+Vou disponibilzar todos os materias que utilizei e estou fazendo na minha graduação nesse repositorio quando estiver com um pouco de mais tempo
