@@ -1,0 +1,4 @@
+Gerador de Som de Freqüência
+Wifi Analyzer Classic
+Barcode Scanner
+Aspect - Analisador de Espectrograma de Áudio

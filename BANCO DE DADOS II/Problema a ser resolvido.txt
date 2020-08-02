@@ -1,0 +1,51 @@
+Link do acesso ao figma:
+ https://www.figma.com/file/oGpR1Q4Heu8VK7K9EhT76P/Portal-da-Transparencia?node-id=0%3A1
+
+-------------Portal da transparencia para o terceiro setor-------------
+
+-------------PO-------------
+ A persona seria o terceiro Setor que se caracteriza por ser uma organizações de iniciativa privada, sem fins lucrativos e que prestam serviços de caráter público.
+
+-------------Solução-------------
+ A solução para o problema seria um portal da transparencia onde seriam incluidos dados sobre orçamento, doações e despesas, recursos transferidos e remunerações a funcionarios, com o intuito de fortalecer a participação social na fiscalização dos gastos e investimentos contribuindo para que esse dinheiro seja menos desperdiçado e melhor aplicado.
+
+-------------Necessidades-------------
+
+-----Orçamento anual-----
+planejamento da empresa quanto às expectativas de receitas e limites de gastos
+
+-----Receitas públicas----- 
+estimativas de arrecadação e valores de fato arrecadados
+
+----- Recursos transferidos----- 
+valores transferidos pela organizações sem fins lucrativos e outros
+
+----- Gastos por cartões de pagamentos----- 
+gastos com despesas de pequeno vulto que exijam pronto pagamento
+
+----- Programas----- 
+distribuição das despesas por programas da organização
+
+----- Benefícios ao cidadão----- 
+recursos destinados a programas
+
+-----Programas e ações orçamentárias----- 
+gastos com programas e ações temáticos, de gestão e de manutenção e serviços
+
+----- Funcionarios----- 
+dados sobre a ocupação de cargos e funções comissionadas
+
+-----Viagens a serviço realizadas-----
+informações sobre despesas em viagens de funcionários
+
+----- Imóveis funcionais-----
+imóveis administrados pela empresa
+
+-----Licitações com contratação realizada-----
+informações sobre processos licitatórios com contratações realizadas
+
+----- Contratos----- 
+dados sobre os contratos processos que os originaram
+
+-----Convênio e outros acordos-----
+informações sobre convênios e outros instrumentos de repasse de verbas celebrados entre governo federal e estados, municípios e organizações

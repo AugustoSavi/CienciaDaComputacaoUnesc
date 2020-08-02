@@ -1,0 +1,32 @@
+--------------Qual a frequência de ondas, se a velocidade desta onde é de 195m/s, e o seu comprimento de onda é de 1cm?--------------
+
+V = C x F
+V=195m/s
+C= 0,01m
+
+R: 19500hz
+
+--------------Qual é a frequência de uma onda que se propaga em um líquido, com velocidade de módulo 10 cm/s, sabendo-se que o seu comprimento de onda é 2 cm?--------------
+
+V = C x F
+V=10cm
+C=2cm
+10= 2. f
+
+R: 5 hz 
+
+--------------A corrente alternada das redes de eletricidade europeias oscila com frequência de 50 ciclos por segundos. Calcule o período dessa corrente.--------------
+
+F=50hz
+T = 1/F
+T = 1/50
+
+R: 0,02 sec
+
+--------------Ondas sonoras propagam-se no ar com velocidade de módulo igual a 3.3 x10^2 m/s. Um som audível tem frequência de 5 kHz. Qual o comprimento de onda desta onda?--------------
+
+V = C x F
+3.3 x10^2 = C x 5000
+C = 330/5000
+
+R: 6,6 cm

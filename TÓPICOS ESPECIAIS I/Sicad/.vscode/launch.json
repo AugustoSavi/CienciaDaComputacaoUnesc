@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Login",
+            "request": "launch",
+            "mainClass": "view.Login",
+            "projectName": "LiuKangAcademySystem"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Menu",
+            "request": "launch",
+            "mainClass": "view.Menu",
+            "projectName": "LiuKangAcademySystem"
+        }
+    ]
+}

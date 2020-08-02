@@ -1,0 +1,15 @@
+nec 1.0: Ser responsivo.
+	-Não necessita de login para visualização dos dados
+	-Web
+	-Acessibilidade 
+
+nec 2.0: Mais de um usuario administrativo precisa confirmar os dados inseridos para que ele possa ser mostrado na pagina.
+	- Usuario pode se cadastrar no site para receber atualizações
+
+nec 3.0: O usuario podera filtrar os dados para facilitar o acesso
+	-usuario podera visualizar graficos
+	-Gerar denunciar referente aos dados informados
+
+nec 4.0: A persona podera cadastrar perfis admistrativos para validação dos dados informados
+	- O usuario que sera cadastrado precisara informar seu cpf e anexar uma foto sua para
+	  Validação e que seja mostrado aos usuarios finais
