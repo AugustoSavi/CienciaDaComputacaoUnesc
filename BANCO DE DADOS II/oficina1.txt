@@ -1,0 +1,51 @@
+Link do acesso ao figma:
+ https://www.figma.com/file/oGpR1Q4Heu8VK7K9EhT76P/Portal-da-Transparencia?node-id=0%3A1
+
+-------------Portal da transparencia para o terceiro setor-------------
+
+-------------PO-------------
+ A persona seria o terceiro Setor que se caracteriza por ser uma organizaÃ§Ãµes de iniciativa privada, sem fins lucrativos e que prestam serviÃ§os de carÃ¡ter pÃºblico.
+
+-------------SoluÃ§Ã£o-------------
+ A soluÃ§Ã£o para o problema seria um portal da transparencia onde seriam incluidos dados sobre orÃ§amento, doaÃ§Ãµes e despesas, recursos transferidos e remuneraÃ§Ãµes a funcionarios, com o intuito de fortalecer a participaÃ§Ã£o social na fiscalizaÃ§Ã£o dos gastos e investimentos contribuindo para que esse dinheiro seja menos desperdiÃ§ado e melhor aplicado.
+
+-------------Necessidades-------------
+
+-----OrÃ§amento anual-----
+planejamento da empresa quanto Ã s expectativas de receitas e limites de gastos
+
+-----Receitas pÃºblicas----- 
+estimativas de arrecadaÃ§Ã£o e valores de fato arrecadados
+
+----- Recursos transferidos----- 
+valores transferidos pela organizaÃ§Ãµes sem fins lucrativos e outros
+
+----- Gastos por cartÃµes de pagamentos----- 
+gastos com despesas de pequeno vulto que exijam pronto pagamento
+
+----- Programas----- 
+distribuiÃ§Ã£o das despesas por programas da organizaÃ§Ã£o
+
+----- BenefÃ­cios ao cidadÃ£o----- 
+recursos destinados a programas
+
+-----Programas e aÃ§Ãµes orÃ§amentÃ¡rias----- 
+gastos com programas e aÃ§Ãµes temÃ¡ticos, de gestÃ£o e de manutenÃ§Ã£o e serviÃ§os
+
+----- Funcionarios----- 
+dados sobre a ocupaÃ§Ã£o de cargos e funÃ§Ãµes comissionadas
+
+-----Viagens a serviÃ§o realizadas-----
+informaÃ§Ãµes sobre despesas em viagens de funcionÃ¡rios
+
+----- ImÃ³veis funcionais-----
+imÃ³veis administrados pela empresa
+
+-----LicitaÃ§Ãµes com contrataÃ§Ã£o realizada-----
+informaÃ§Ãµes sobre processos licitatÃ³rios com contrataÃ§Ãµes realizadas
+
+----- Contratos----- 
+dados sobre os contratos processos que os originaram
+
+-----ConvÃªnio e outros acordos-----
+informaÃ§Ãµes sobre convÃªnios e outros instrumentos de repasse de verbas celebrados entre governo federal e estados, municÃ­pios e organizaÃ§Ãµes

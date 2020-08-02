@@ -1,0 +1,17 @@
+1-Cadastro de produtos,manter integridade da quantidade de saldo de produtos e listagem de todos os pedidos feitos pela pagina na web.
+
+2- Sim, Pois sem sem uma aplicaÃ§Ã£o nÃ£o haveria necessidade de um banco de dados.
+
+3-NÃ£o. Em aplicaÃ§Ãµes simples onde nÃ£o Ã© necessario manter dados(usuarios,funcionarios...) nÃ£o a necessidade de um banco de dados.
+
+4-NÃ£o.DB Ã© sÃ³ um espaÃ§o que sera usado,SGDB cria as Databases,as tabelas...
+
+5- Sim,Pois todos os jogos tem automaÃ§Ãµes que precisam ser armazenadas
+
+6-Mongodb,DB2 e Cassandra
+
+7-NÃ£o,pois o padrao Ã© criado pelo programador.
+
+8-Sim. Pois tambÃ©m mantem a persistÃªncia dos dados.
+
+9-NÃ£o. Pois causaria uma exceÃ§Ã£o no padrÃ¢o.

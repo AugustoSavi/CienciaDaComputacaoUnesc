@@ -1,0 +1,10 @@
+Dupla:Augusto Savi, Arthur Hassan Souki
+1-Conceito de Engenharia de Software elaborado:
+*A engenharia de Software cuida da parte de metÃ³dos de desenvolvimentos,buscando sempre software que atendam aos requisitos e ainda tenham um bom
+pos vÃ©nda, tendo um codigo limpo e de facÃ­l manutenÃ§Ã£o e entendimento.
+
+2-Conceito de Engenharia de Software colado:
+
+* Segundo Friedrich Ludwig Bauer,"Engenharia de software Ã© a criaÃ§Ã£o e a utilizaÃ§Ã£o de sÃ³lidos princÃ­pios de engenharia a fim de obter software de maneira econÃ´mica, que seja confiÃ¡vel e que trabalhe eficientemente em mÃ¡quinas reais".
+
+*Segundo o IEEE(1992),â€œEngenharia desoftware Ã© a aplicaÃ§Ã£o de uma abordagem sistemÃ¡tica, disciplinada e quantificÃ¡vel,para o desenvolvimento,operaÃ§Ã£o e manutenÃ§Ã£o do software;isto Ã©,a aplicaÃ§Ã£o de engenharia ao software.â€

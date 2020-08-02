@@ -1,0 +1,39 @@
+1.Crie o modelo conceitual para um sistema de biblioteca com pelo menos 5 entidades e seus atributos(ao menos 4 atributos cada);
+-Livro: Titulo,Codigo de barras,Editora, escritor e estoque.
+-Funcionario: Nome,Cpf,Cargo,Salario e sexo.
+-Usuario:Nome,login,senha,data de nascimento e telefone.
+-Venda:Codigo de barras,quantidade,data e valor.
+-Estoque: Quantidade, codigo do livro, valor do livro 
+2.Descreva com suas palavras o tipo de relacionamento que um entidade tem com outra(quando houver),não precisa de diagrama.
+-a venda tem um usuario e um funcionario a realizando.
+-o livro tem relacinamento n/1 com o estoque. 
+3.Descreva o tipo de dados de cada atributo;
+-Livro: 
+Titulo: String
+Codigo de barras: int
+Editora: string
+escritor : String
+-Funcionario: 
+Nome: String
+Cpf : String
+Cargo : String
+Salario : float
+sexo : char
+-Usuario:
+Nome: String
+login: String
+senha :String
+data de nascimento: Date
+ telefone : String
+-Venda:
+Codigo de barras: String
+quantidade: INt
+data: Date
+valor:Float
+-Estoque:
+Quantidade: int 
+codigo do livro: int
+valor de venda:Float
+valor de compra: Float 
+
+
