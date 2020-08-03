@@ -2,6 +2,8 @@
     :rocket: Ciencia da Computação Unesc
 </h1>
 
+## As Disciplinas que estão marcadas são as que eu já obtive aprovação
+
 - [X] Algoritmos e Programação
 - [X] Introdução À Ciência da Computação
 - [X] Metodologia Científica e da Pesquisa
@@ -50,8 +52,14 @@
 - [ ] Optativa
 
 
-Carga Horária Obrigatória: 3.000h Carga Horária Concluída: 1.320h
+:watch: Carga Horária Obrigatória: 3.000h Carga Horária Concluída: 1.320h
+
+<h2 align="center">
+ :exclamation: ATENÇÃO :exclamation:
+</h2>
+
+### Algumas das atividades postadas não estão totalmente corretas, então antes de dar somente seu ctrl+c ctrl+v de uma conferida.
 
 
 
-Vou disponibilzar todos os materias que utilizei e estou fazendo na minha graduação nesse repositorio quando estiver com um pouco de mais tempo
+Estou disponibilizando aos poucos e a maneira que vou encontrando e fazendo as atividades que desenvolvi no curso
