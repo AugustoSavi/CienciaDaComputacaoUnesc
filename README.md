@@ -5,6 +5,8 @@
 <h3 align="center">
  As Disciplinas que estão marcadas são as que eu já obtive aprovação
 </h3>
+
+
 - [X] Algoritmos e Programação
 - [X] Introdução À Ciência da Computação
 - [X] Metodologia Científica e da Pesquisa
