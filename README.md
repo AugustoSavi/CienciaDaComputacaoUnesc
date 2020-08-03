@@ -61,10 +61,13 @@
  :exclamation: ATENÇÃO :exclamation:
 </h2>
 
-### Algumas das atividades postadas não estão totalmente corretas, então antes de dar somente seu ctrl+c ctrl+v de uma conferida.
-
+<h3 align= "center">
+Algumas das atividades postadas não estão totalmente corretas, então antes de dar somente seu ctrl+c ctrl+v de uma conferida.
+</h3>
 
 
 Estou disponibilizando aos poucos e a maneira que vou encontrando e fazendo as atividades que desenvolvi no curso
 
+<h3 align = "center"> 
 :heavy_exclamation_mark: Pode usar o material aqui disponibilizado a vontade mas utilize com sabedoria :heavy_exclamation_mark:
+</h3>
