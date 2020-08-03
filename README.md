@@ -63,3 +63,5 @@
 
 
 Estou disponibilizando aos poucos e a maneira que vou encontrando e fazendo as atividades que desenvolvi no curso
+
+:heavy_exclamation_mark: Pode usar o material aqui disponibilizado a vontade mas utilize com sabedoria :heavy_exclamation_mark:
