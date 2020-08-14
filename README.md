@@ -31,8 +31,8 @@
 - [X] Engenharia de Software I
 - [ ] Linguagens Formais
 - [ ] Banco de Dados II
-- [ ] Comunicação de Dados
-- [ ] Teoria da Computação
+- [X] Comunicação de Dados
+- [X] Teoria da Computação
 - [ ] Cálculo I
 - [ ] Cálculo II
 - [ ] Projeto Interdisciplinar da Computação II
