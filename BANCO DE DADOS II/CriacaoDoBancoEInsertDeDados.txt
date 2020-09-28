@@ -1,0 +1,117 @@
+
+CREATE DATABASE universidade;
+
+CREATE TABLE cad_aluno (
+  id_aluno INT(11) NOT NULL AUTO_INCREMENT ,
+  
+  descricao VARCHAR(150) NOT NULL,
+  
+  endereco VARCHAR(255) DEFAULT NULL,
+  
+  cidade VARCHAR(30) DEFAULT NULL,
+  
+  PRIMARY KEY (cad_aluno)
+);
+
+CREATE TABLE cad_disciplina (
+  
+  id_disciplina INT(11) NOT NULL AUTO_INCREMENT,
+  
+  descricao VARCHAR(150) NOT NULL,
+  
+  carga_horaria INT(11) DEFAULT NULL,
+  
+  PRIMARY KEY (id_disciplina)
+);
+
+CREATE TABLE cad_professor (
+  id_professor INT(11) NOT NULL AUTO_INCREMENT ,
+  
+  descricao VARCHAR(150) NOT NULL,
+  
+  endereco VARCHAR(255) DEFAULT NULL,
+  
+  cidade VARCHAR(30) DEFAULT NULL,
+  
+  PRIMARY KEY (id_professor)
+);
+
+CREATE TABLE cad_turma (
+  id_turma INT(11) NOT NULL AUTO_INCREMENT ,
+
+  id_disciplina INT(11) NOT NULL,
+
+  id_professor INT(11) NOT NULL,
+
+  ano INT(11),
+
+  horario varchar(20),
+
+  PRIMARY KEY (id_turma),
+  
+  FOREIGN KEY (id_disciplina) REFERENCES cad_disciplina(id_disciplina),
+
+  FOREIGN KEY (id_professor) REFERENCES cad_professor(id_professor)
+  );
+
+CREATE TABLE cad_historico (
+  id_historico int(11) NOT NULL AUTO_INCREMENT,
+  
+  id_aluno INT(11) NOT NULL ,
+  
+  id_disciplina INT(11) NOT NULL ,
+  
+  id_turma INT(11) NOT NULL ,
+  
+  id_professor INT(11) NOT NULL,
+  
+  ano INT(11) DEFAULT NULL,
+  
+  frequencia INT(11) DEFAULT NULL,
+  
+  nota INT(11),
+  
+  PRIMARY KEY (id_historico),
+
+  FOREIGN KEY (id_aluno) REFERENCES cad_aluno(id_aluno),
+  
+  FOREIGN KEY (id_disciplina) REFERENCES cad_turma(id_disciplina),
+  
+  FOREIGN KEY (id_turma) REFERENCES cad_turma(id_turma),
+
+  FOREIGN KEY (id_professor) REFERENCES cad_turma(id_professor),
+
+  FOREIGN KEY (ano) REFERENCES cad_turma(ano)
+);
+
+
+INSERT INTO cad_aluno VALUES (2015010101," JOSE DE ALENCAR"," RUA DAS ALMAS"," NATAL");
+INSERT INTO cad_aluno VALUES (2015010102," JOÃO JOSÉ"," AVENIDA RUY CARNEIRO"," JOÃO PESSOA");
+INSERT INTO cad_aluno VALUES (2015010103," MARIA JOAQUINA"," RUA CARROSSEL","RECIFE");
+INSERT INTO cad_aluno VALUES (2015010104," MARIA DAS DORES"," RUA DAS LADEIRAS"," FORTALEZA");
+INSERT INTO cad_aluno VALUES (2015010105," JOSUÉ CLAUDINO DOS SANTOS"," CENTRO","NATAL");
+INSERT INTO cad_aluno VALUES (2015010106," JOSUÉLISSON CLAUDINO DOS SANTOS"," CENTRO"," NATAL");
+
+INSERT INTO cad_disciplina VALUES (1, "BANCO DE DADOS", 100);
+INSERT INTO cad_disciplina VALUES (2, "PROGRAMAÇÃO COM ACESSO A BANCO DE DADOS", 100);
+INSERT INTO cad_disciplina VALUES (3, "AUTORIA WEB", 50);
+INSERT INTO cad_disciplina VALUES (4, "ENGENHARIA DE SOFTWARE", 80);
+
+INSERT INTO cad_professor VALUES (212131, "NICKERSON FERREIRA", "RUA MANAÍRA", "JOÃO PESSOA");
+INSERT INTO cad_professor VALUES (122135, "ADORILSON BEZERRA", "AVENIDA SALGADO FILHO"," NATAL");
+INSERT INTO cad_professor VALUES (192011, "DIEGO OLIVEIRA", "AVENIDA ROBERTO FREIRE", "NATAL");
+
+INSERT INTO cad_turma VALUES (1,"1","212131"," 2015"," 11H-12H");
+INSERT INTO cad_turma VALUES (2,"2","212131"," 2015"," 13H-14H");
+INSERT INTO cad_turma VALUES (3,"1","192011"," 2015"," 08H-09H");
+INSERT INTO cad_turma VALUES (4,"1","192011"," 2015"," 07H-08H");
+INSERT INTO cad_turma VALUES (5,"1","122135"," 2015"," 10H-11H");
+
+
+INSERT INTO cad_historico VALUES (1,"2015010101", "1", "1", "122135", "2015", "10","100");
+INSERT INTO cad_historico VALUES (2, "2015010102", "2", "1", "122135", "2015", "80","100");
+INSERT INTO cad_historico VALUES (3, "2015010103", "1", "1", "122135", "2015", "85","100");
+INSERT INTO cad_historico VALUES (4, "2015010104", "1", "2", "122135", "2015", "90","100");
+INSERT INTO cad_historico VALUES (5, "2015010105", "1", "2", "122135", "2015", "100","100");
+
+SELECT id_aluno,nota FROM cad_historico WHERE id_disciplina = '1' AND ano ='2015' AND nota> 7;
