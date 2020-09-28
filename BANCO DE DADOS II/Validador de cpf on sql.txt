@@ -1,0 +1,10 @@
+SELECT `id_cliente`, `descricao`, `cpf_cnpj`,`tipo`, @dig2:=CONCAT( @dig1:=(
+          SUBSTR(cpf_cnpj, 1,1)   + SUBSTR(cpf_cnpj, 2,1)*2 + SUBSTR(cpf_cnpj, 3,1)*3 +
+          SUBSTR(cpf_cnpj, 5,1)*4 + SUBSTR(cpf_cnpj, 6,1)*5 + SUBSTR(cpf_cnpj, 7,1)*6 +
+          SUBSTR(cpf_cnpj, 9,1)*7 + SUBSTR(cpf_cnpj,10,1)*8 + SUBSTR(cpf_cnpj,11,1)*9 ) % 11 % 10
+,(
+          SUBSTR(cpf_cnpj, 2,1)   + SUBSTR(cpf_cnpj, 3,1)*2 + SUBSTR(cpf_cnpj, 5,1)*3 +
+          SUBSTR(cpf_cnpj, 6,1)*4 + SUBSTR(cpf_cnpj, 7,1)*5 + SUBSTR(cpf_cnpj, 9,1)*6 +
+          SUBSTR(cpf_cnpj,10,1)*7 + SUBSTR(cpf_cnpj,11,1)*8 + @dig1           *9 ) % 11 % 10
+       ) AS digito,
+IF( SUBSTR(cpf_cnpj, 13, 2)=@dig2, "Valido", "Invalido" ) AS situacao FROM `cad_cliente` WHERE tipo= "F"; 
