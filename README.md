@@ -29,14 +29,14 @@
 - [X] Tópicos Especiais I
 - [X] Banco de Dados I
 - [X] Engenharia de Software I
-- [ ] Linguagens Formais
+- [x] Linguagens Formais
 - [ ] Banco de Dados II
 - [X] Comunicação de Dados
 - [X] Teoria da Computação
 - [ ] Cálculo I
 - [ ] Cálculo II
 - [ ] Projeto Interdisciplinar da Computação II
-- [ ] Sistemas Operacionais
+- [X] Sistemas Operacionais
 - [ ] Engenharia de Software II
 - [ ] Compiladores
 - [ ] Redes de Computadores
@@ -55,7 +55,7 @@
 - [ ] Optativa
 
 
-:watch: Carga Horária Obrigatória: 3.000h Carga Horária Concluída: 1.320h
+:watch: Carga Horária Obrigatória: 3.000h Carga Horária Concluída: 1.560h
 
 <h2 align="center">
  :exclamation: ATENÇÃO :exclamation:
