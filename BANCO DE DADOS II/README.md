@@ -194,5 +194,3 @@
 | cnpj               | varchar(19) | YES  |     |         |                |
 
 ---
-
-[View on DB Fiddle](https://www.db-fiddle.com/)
