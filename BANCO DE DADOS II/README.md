@@ -8,7 +8,7 @@
 
     SHOW TABLES from `andes`;
 
-| Tables_in_test        |
+| Tables_in_andes       |
 | --------------------- |
 | categorias            |
 | clientes              |
