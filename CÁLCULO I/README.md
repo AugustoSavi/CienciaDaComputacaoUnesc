@@ -1,3 +1,7 @@
+## função racional indeterminada
+primeiro verifica se o denominador da zero
+se não der só substitui 
+
 ## Limites
 
 	se limites laterais divergirem não existem existe limite

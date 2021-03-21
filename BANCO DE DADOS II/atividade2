@@ -1,3 +1,7 @@
+CREATE DATABASE `petshop`;
+
+USE `petshop`;
+
 CREATE TABLE `clinicas` (
   `nclin` int PRIMARY KEY AUTO_INCREMENT,
   `andar` numeric(3) NOT NULL,
@@ -47,3 +51,23 @@ ALTER TABLE `veterinarios` ADD FOREIGN KEY (`nclin`) REFERENCES `clinicas` (`ncl
 ALTER TABLE `consultas` ADD FOREIGN KEY (`codv`) REFERENCES `veterinarios` (`codv`);
 
 ALTER TABLE `consultas` ADD FOREIGN KEY (`codp`) REFERENCES `pet` (`codp`);
+
+ALTER TABLE `funcionarios` ADD  `nclin` int;
+
+CREATE INDEX idx_CPF ON `veterinarios`(`CPF`);
+
+
+CREATE INDEX idx_DOENCA ON `pet`(`doenca`);
+
+
+SHOW COLUMNS FROM clinicas;
+
+SHOW COLUMNS FROM veterinarios;
+SHOW INDEXES FROM veterinarios;
+
+SHOW COLUMNS FROM pet;
+SHOW INDEXES FROM pet;
+
+SHOW COLUMNS FROM funcionarios;
+
+SHOW COLUMNS FROM consultas;
