@@ -2,7 +2,8 @@
 SQLyog Community Edition- MySQL GUI v7.14 
 MySQL - 5.0.45-community-nt : Database - Andes
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -48,7 +49,28 @@ CREATE TABLE `clientes` (
 
 /*Data for the table `clientes` */
 
-insert  into `clientes`(`ClienteID`,`NomeCliente`,`Endereco`,`Cidade`,`Estado`,`CEP`,`Email`,`Usuario`,`Senha`,`Nivel`) values (7,'Bob','2929 Kobe Dr','São Paulo',27,'92123','bobrob@dru','bobrob','cheese','admin'),(8,'Lee','5927 Priestly Dr','Rio de Janeiro',22,'92008','ldkim@drum','ldkim','drums','admin'),(9,'Jane','5924 Priestly Dr','Recife',17,'92008','jstev@fili','zac','zac','admin'),(33,'Mary','2 Mill Lane','Rio de Janeiro',22,'P0987GH','mary@sheep.com','mary','baa','user'),(34,'Adriaan','2 Main St.','Porto Alegre',21,'90876','joe@blow.net','joe','blow','user'),(35,'Yeshe','26 Place des Vosges','Recife',17,'75003','kako@alibert.org','kako','crow','user'),(36,'Jean-Claude','26 Rue des Archives','Salvador',5,'75003','bouquet@paris.com','bouquet','archives','foreign'),(37,'Charmian','Box 99','Fortaleza',6,'87543','thepet@cows.com','petty','officer','admin'),(38,'Tex','2 main st','Fortaleza',6,'92107','minou@sefton.com','minou','lechat','user'),(39,'James','1222 Lotus St','Belo Horizonte',13,'92107','jjones@thing.com','jj','magenta','user'),(40,'Scott','1312 Harley St.','Curitiba',16,'41414','scottie@theworks.camvria.com','scooby','doo','user'),(41,'Mavis','774A The Lane','Florianopolis',28,'99999','mave@formerly.sisters.org','mkirk','jesus','user'),(42,'Morton','413 4th St, Ste#220','João Pessoa',15,'71717','mgold@brockyard.herrr.org','gold','rng665','user'),(43,'Monica','21 Arbor Drive','Belém',14,'91111','birch@nobodys.fool.com','birch','bsgr%','admin'),(44,'Amos','4545 Framingham Ave','Manaus',4,'31311','add@barnham.peoples.com','adur','adur','user'),(45,'Pietro','fdfd','Goiania',9,'dfsf','pcard@utica.gegli.it','cardinal','oojj&t','foreign'),(46,'Amosa','fggf','Brasília',7,'gfg','bosun@navarro.edu','partner','fairies','user'),(47,'Marvin','4545 Fir','São Luis',10,'30303','mdekal@megaprod.com','mdekal','uu6654','user'),(48,'Duncan','Box 1223','Vitória',8,'221','biggie@brabazon.co.il','brab','plane','foreign'),(49,'Brandon','1212 Penny Lane','Macapá',3,'21177','bshaft@thegroup.net','shaft','3344510','user'),(50,'Raul','444 Farley Ave','Maceió',2,'92117','rost@aero.mx.com','pilot','brebby','user');
+insert  into `clientes`(`ClienteID`,`NomeCliente`,`Endereco`,`Cidade`,`Estado`,`CEP`,`Email`,`Usuario`,`Senha`,`Nivel`) values 
+(7,'Bob','2929 Kobe Dr','São Paulo',27,'92123','bobrob@dru','bobrob','cheese','admin'),
+(8,'Lee','5927 Priestly Dr','Rio de Janeiro',22,'92008','ldkim@drum','ldkim','drums','admin'),
+(9,'Jane','5924 Priestly Dr','Recife',17,'92008','jstev@fili','zac','zac','admin'),
+(33,'Mary','2 Mill Lane','Rio de Janeiro',22,'P0987GH','mary@sheep.com','mary','baa','user'),
+(34,'Adriaan','2 Main St.','Porto Alegre',21,'90876','joe@blow.net','joe','blow','user'),
+(35,'Yeshe','26 Place des Vosges','Recife',17,'75003','kako@alibert.org','kako','crow','user'),
+(36,'Jean-Claude','26 Rue des Archives','Salvador',5,'75003','bouquet@paris.com','bouquet','archives','foreign'),
+(37,'Charmian','Box 99','Fortaleza',6,'87543','thepet@cows.com','petty','officer','admin'),
+(38,'Tex','2 main st','Fortaleza',6,'92107','minou@sefton.com','minou','lechat','user'),
+(39,'James','1222 Lotus St','Belo Horizonte',13,'92107','jjones@thing.com','jj','magenta','user'),
+(40,'Scott','1312 Harley St.','Curitiba',16,'41414','scottie@theworks.camvria.com','scooby','doo','user'),
+(41,'Mavis','774A The Lane','Florianopolis',28,'99999','mave@formerly.sisters.org','mkirk','jesus','user'),
+(42,'Morton','413 4th St, Ste#220','João Pessoa',15,'71717','mgold@brockyard.herrr.org','gold','rng665','user'),
+(43,'Monica','21 Arbor Drive','Belém',14,'91111','birch@nobodys.fool.com','birch','bsgr%','admin'),
+(44,'Amos','4545 Framingham Ave','Manaus',4,'31311','add@barnham.peoples.com','adur','adur','user'),
+(45,'Pietro','fdfd','Goiania',9,'dfsf','pcard@utica.gegli.it','cardinal','oojj&t','foreign'),
+(46,'Amosa','fggf','Brasília',7,'gfg','bosun@navarro.edu','partner','fairies','user'),
+(47,'Marvin','4545 Fir','São Luis',10,'30303','mdekal@megaprod.com','mdekal','uu6654','user'),
+(48,'Duncan','Box 1223','Vitória',8,'221','biggie@brabazon.co.il','brab','plane','foreign'),
+(49,'Brandon','1212 Penny Lane','Macapá',3,'21177','bshaft@thegroup.net','shaft','3344510','user'),
+(50,'Raul','444 Farley Ave','Maceió',2,'92117','rost@aero.mx.com','pilot','brebby','user');
 
 /*Table structure for table `departamentos` */
 

@@ -1,6 +1,4 @@
-# Acesse https://www.db-fiddle.com/ e cole o conteudo de sqltodbfiddle
-
-## script andes.sql 
+# Acesse o [banco online aqui](https://www.db-fiddle.com/f/d53eRuAqWiwzud2qPZQvQu/2)
 
 ---
 
@@ -194,5 +192,3 @@
 | cnpj               | varchar(19) | YES  |     |         |                |
 
 ---
-
-[View on DB Fiddle](https://www.db-fiddle.com/)

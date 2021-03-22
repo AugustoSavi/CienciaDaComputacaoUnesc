@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS `Andes` 
+-- CREATE DATABASE IF NOT EXISTS `Andes` 
 
-USE `Andes`;
+-- USE `Andes`;
 
 /*Table structure for table `categorias` */
 
@@ -216,16 +216,3 @@ CREATE TABLE `transportadoras` (
 /*Data for the table `transportadoras` */
 
 insert  into `transportadoras`(`transportadoraID`,`nometransportadora`,`endereco`,`telefone`,`cidade`,`estadoID`,`cep`,`cnpj`) values (1,'Rapidão Estrela','Rua Ernesto de Paula Santos, 187','33262836','Recife',17,'51.021-330','2234234234'), (2,'Itapemirão','Rua Visconde de Sabugosa, 11','33262836','São Paulo',27,'01.323.123','2424243221'), (3,'SEDEX','Av Ipanema, 22123','33262836','Rio de Janeiro',21,'02.320.121','2342424324');
-
-SHOW COLUMNS FROM `categorias`;
-SHOW COLUMNS FROM `clientes`;
-SHOW COLUMNS FROM `departamentos`;
-SHOW COLUMNS FROM `estados`;
-SHOW COLUMNS FROM `fornecedores`;
-SHOW COLUMNS FROM `fornecedores_contatos`;
-SHOW COLUMNS FROM `franquias`;
-SHOW COLUMNS FROM `pedidos`;
-SHOW COLUMNS FROM `pedidos_item`;
-SHOW COLUMNS FROM `pedidos_status`;
-SHOW COLUMNS FROM `produtos`;
-SHOW COLUMNS FROM `transportadoras`; 
