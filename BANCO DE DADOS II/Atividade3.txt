@@ -1,0 +1,9 @@
+SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
+
+select func.nome as "Nome", func.DataAdmissao as "Data admissão", SUM(det.PrecoUnitario * det.Quantidade - det.Desconto) as 'Total vendas'
+from funcionarios func  inner join ordens o on func.IDFuncionario = o.IDFuncionario
+inner join ordens_detalhes det on det.IDOrdem = o.IDOrdem
+group by func.nome
+order by 'Total vendas' desc
+limit 3;
+
