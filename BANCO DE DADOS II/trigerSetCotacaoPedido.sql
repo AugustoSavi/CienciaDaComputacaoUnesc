@@ -1,0 +1,1 @@
+create trigger tgr_cotacao before insert on pedidos FOR EACH ROW SET new.valor_dolar = cotacao_dolar(new.valor_pedido,new.data_pedido);
