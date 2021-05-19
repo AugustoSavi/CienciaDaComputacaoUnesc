@@ -1,0 +1,2 @@
+select e.nomeEmpregado from Empregado as e where e.id in (select idEmpregrado from Ferias where ano = 2020) 
+and e.idDepartamento in (select idDepartamento from Departamento where nomeDepartamento = "recursos humanos");

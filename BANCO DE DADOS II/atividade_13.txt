@@ -1,0 +1,72 @@
+------------------- parte 1 -------------------
+
+A) 
+
+SELECT T.trajetoid
+ FROM trajeto T, segmento S, estrada E
+ WHERE T.trajetoid = S.trajetoid AND S.estradaid = E.estradaid AND
+T.cidade_origem <> E.cidade_origem AND S.ordem = 1;
+
+B)
+
+CREATE VIEW total_trajeto AS
+SELECT T.trajetoid trajid, T.cidade_origem origem, T.cidade_destino destino, SUM(E.extensao_km)
+extensao
+ FROM trajeto T, segmento S, estrada E
+ WHERE T.trajetoid = S.trajetoid AND S.estradaid = E.estradaid
+ GROUP BY T.trajetoid, T.cidade_origem, T.cidade_destino;
+
+SELECT origem, destino, MIN(extensao)
+ FROM TotalTrajeto
+ GROUP BY origem, destino;
+
+
+------------------- parte 2 -------------------
+
+UPDATE Trajeto T
+ SET T.extensao_km =
+ (SELECT SUM(E.extensao_km)
+ FROM Segmento S, Estrada E
+ WHERE T.trajetoid = S.trajetoid AND
+ S.estradaid = E.estradaid);
+
+
+------------------- parte 3 -------------------
+
+CREATE TABLE `cidade` (
+  `cidadeid` int PRIMARY KEY AUTO_INCREMENT,
+  `nome` varchar(100)
+);
+
+CREATE TABLE `estrada` (
+  `estradaid` int PRIMARY KEY AUTO_INCREMENT,
+  `nome` varchar(100),
+  `fk_cidade_origem` int,
+  `fk_cidade_destino` int,
+  `extensao_km` int
+);
+
+CREATE TABLE `segmento` (
+  `segmentoid` int PRIMARY KEY AUTO_INCREMENT,
+  `fk_trajetoid` int,
+  `fk_estradaid` int,
+  `ordem` int
+);
+
+CREATE TABLE `trajeto` (
+  `trajetoid` int PRIMARY KEY AUTO_INCREMENT,
+  `fk_cidade_origem` int,
+  `fk_cidade_destino` int
+);
+
+ALTER TABLE `trajeto` ADD FOREIGN KEY (`fk_cidade_origem`) REFERENCES `cidade` (`cidadeid`);
+
+ALTER TABLE `trajeto` ADD FOREIGN KEY (`fk_cidade_destino`) REFERENCES `cidade` (`cidadeid`);
+
+ALTER TABLE `estrada` ADD FOREIGN KEY (`fk_cidade_origem`) REFERENCES `cidade` (`cidadeid`);
+
+ALTER TABLE `estrada` ADD FOREIGN KEY (`fk_cidade_destino`) REFERENCES `cidade` (`cidadeid`);
+
+ALTER TABLE `segmento` ADD FOREIGN KEY (`fk_estradaid`) REFERENCES `estrada` (`estradaid`);
+
+ALTER TABLE `segmento` ADD FOREIGN KEY (`fk_trajetoid`) REFERENCES `trajeto` (`trajetoid`);
