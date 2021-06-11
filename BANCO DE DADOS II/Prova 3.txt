@@ -36,3 +36,6 @@
 
 *Referencia*
     Modelagem de Banco de Dados Relacional: Índices e Normalização. alura, 2021. Disponível em: https://cursos.alura.com.br/course/modelagem-banco-relacional. Acesso em: 08, 06 e 2021.
+    
+    *Link para apresentação*
+        https://github.com/AugustoSavi/CienciaDaComputacaoUnesc/blob/master/BANCO%20DE%20DADOS%20II/Apresenta%C3%A7%C3%A3o%20prova%203.pdf
