@@ -1,0 +1,38 @@
+*Problema*
+
+    o CEO da livraria nos chamou pois a equipe de Data Analysis informa que, quando um livro é lançado, há em média 100 vendas. Quando dois livros são lançados no mesmo dia, a lógica seria a venda de 200 deles, já que cada um venderia 100.
+    No entanto, a venda ocorre em torno de 160, 150 livros. Eles querem saber quantos livros lançamos em um mesmo dia para verificar a possibilidade de melhora nas vendas. Precisamos gerar um relatório para ajudar a equipe de Data Analysis.
+    Faremos uma query para contabilizar a quantidade de livros lançados no mesmo dia
+
+*Query Criada*
+
+    select *, (select count(l2.data_de_lancamento) from livros as l2 where l2.data_de_lancamento = l.data_de_lancamento) as anteriores from livros as l order by l.data_de_lancamento;
+    Essa query demorou 2 minutos para ser executado.
+
+*Entendendo porque está demorando tanto*
+
+    explain select *, (select count(l2.data_de_lancamento) from livros as l2 where l2.data_de_lancamento = l.data_de_lancamento) as anteriores from livros as l order by l.data_de_lancamento;
+    Os 20 mil registros se tornaram 400 mil registros na query.
+
+*Solução para o problema*
+    Adcionaremos index na coluna de data que esta sendo usada na comparação da query.
+
+*Após a adicão do index quanto tempo demorou?*
+    200 milisegundos.
+
+*Comandos usados*
+
+    SELECT count(id) from livros l ;
+
+    select *, (select count(l2.data_de_lancamento) from livros l2 where l2.data_de_lancamento = l.data_de_lancamento) as anteriores
+    from livros l order by l.data_de_lancamento
+
+    explain select *, (select count(l2.data_de_lancamento) from livros l2 where l2.data_de_lancamento = l.data_de_lancamento) as anteriores
+    from livros l order by l.data_de_lancamento
+
+    show index from livros;
+
+    create index indice_por_lancamento on livros(data_de_lancamento);
+
+*Referencia*
+    Modelagem de Banco de Dados Relacional: Índices e Normalização. alura, 2021. Disponível em: https://cursos.alura.com.br/course/modelagem-banco-relacional. Acesso em: 08, 06 e 2021.
