@@ -32,20 +32,20 @@
 - [X] Comunicação de Dados
 - [X] Teoria da Computação
 - [X] Sistemas Operacionais
-- [ ] Banco de Dados II
-- [ ] Cálculo I
-- [ ] Cálculo II
-- [ ] Engenharia de Software II
-- [ ] Redes de Computadores
-- [ ] Empreendedorismo
+- [X] Banco de Dados II
+- [X] Cálculo I
+- [X] Cálculo II
+- [X] Engenharia de Software II
+- [X] Redes de Computadores
+- [X] Empreendedorismo
 - [ ] Projeto Interdisciplinar da Computação II
-- [ ] Compiladores
 - [ ] Computação Paralela e Distribuída
 - [ ] Computação Gráfica
 - [ ] Inteligência Artificial
 - [ ] Administração Empresarial
 - [ ] Trabalho de Conclusão de Curso - TCC I
 - [ ] Tópicos Especiais II
+- [ ] Compiladores
 - [ ] Trabalho de Conclusão de Curso - TCC II
 - [ ] Gestão de Sistemas de Informação
 - [ ] Optativa I
