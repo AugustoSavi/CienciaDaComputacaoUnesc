@@ -59,8 +59,8 @@
 </h2>
 
 Carga Horária Obrigatória: 3.000h
-Carga Horária Concluída: 1.560h
-Carga Horária Faltante: 1.440h
+Carga Horária Concluída: 1.920h
+Carga Horária Faltante: 1.080h
 
 <h2 align="center">
  :exclamation: ATENÇÃO :exclamation:
