@@ -38,13 +38,6 @@
 - [X] Engenharia de Software II
 - [X] Redes de Computadores
 - [X] Empreendedorismo
-- [ ] Projeto Interdisciplinar da Computação II
-- [ ] Computação Paralela e Distribuída
-- [ ] Computação Gráfica
-- [ ] Inteligência Artificial
-- [ ] Administração Empresarial
-- [ ] Trabalho de Conclusão de Curso - TCC I
-- [ ] Tópicos Especiais II
 - [ ] Compiladores
 - [ ] Trabalho de Conclusão de Curso - TCC II
 - [ ] Gestão de Sistemas de Informação
@@ -52,6 +45,18 @@
 - [ ] Tópicos Especiais III
 - [ ] Trabalho de Conclusão de Curso - TCC III
 - [ ] Optativa
+
+<h3 align="center">
+ Cursando semestre 2021/2
+</h3>
+
+- [ ] Projeto Interdisciplinar da Computação II
+- [ ] Computação Paralela e Distribuída
+- [ ] Computação Gráfica
+- [ ] Inteligência Artificial
+- [ ] Administração Empresarial
+- [ ] Trabalho de Conclusão de Curso - TCC I
+- [ ] Tópicos Especiais II
 
 
 <h2 align="center">
