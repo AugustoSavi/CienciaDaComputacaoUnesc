@@ -1,0 +1,12 @@
+Tecnologocias:
+* cliente side: 
+ - JavaScript
+ - HTML
+ - CSS
+
+* server side: 
+ - Java
+ - PHP
+ - Python
+
+

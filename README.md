@@ -38,13 +38,6 @@
 - [X] Engenharia de Software II
 - [X] Redes de Computadores
 - [X] Empreendedorismo
-- [ ] Projeto Interdisciplinar da Computação II
-- [ ] Computação Paralela e Distribuída
-- [ ] Computação Gráfica
-- [ ] Inteligência Artificial
-- [ ] Administração Empresarial
-- [ ] Trabalho de Conclusão de Curso - TCC I
-- [ ] Tópicos Especiais II
 - [ ] Compiladores
 - [ ] Trabalho de Conclusão de Curso - TCC II
 - [ ] Gestão de Sistemas de Informação
@@ -53,14 +46,26 @@
 - [ ] Trabalho de Conclusão de Curso - TCC III
 - [ ] Optativa
 
+<h3 align="center">
+ Cursando semestre 2021/2
+</h3>
+
+- [ ] Projeto Interdisciplinar da Computação II
+- [ ] Computação Paralela e Distribuída
+- [ ] Computação Gráfica
+- [ ] Inteligência Artificial
+- [ ] Administração Empresarial
+- [ ] Trabalho de Conclusão de Curso - TCC I
+- [ ] Tópicos Especiais II
+
 
 <h2 align="center">
  :watch:  Carga Horária
 </h2>
 
 Carga Horária Obrigatória: 3.000h
-Carga Horária Concluída: 1.560h
-Carga Horária Faltante: 1.440h
+Carga Horária Concluída: 1.920h
+Carga Horária Faltante: 1.080h
 
 <h2 align="center">
  :exclamation: ATENÇÃO :exclamation:
