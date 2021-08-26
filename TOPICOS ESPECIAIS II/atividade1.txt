@@ -1,0 +1,10 @@
+1. Classe: Arquivo onde contem o esqueleto de um dado, juntamente com seus metodos para pegar e setar esses dados
+2. Objeto: Objeto pode ser a instancia de um classe contendo os dados vazios ou preenchido que pode ser lidos e escritos por outros metodos
+3. Mensagem: não entendi muito bem essa, mas acredito que seja uma forma de se comunicar com outra pessoa de forma que a outra pessoa tambem entenda, exemplo um aviso para o cliente ou um comentario no codigo para explicar o que o trecho faz
+4. Herança: não lembro muito bem e possso estar confundindo com classe Abstrata
+5. Polimorfismo Estático: não lembro
+6. Polimorfismo Dinâmico: não lembro
+7. Encapsulamento: forma de proteger dados, exemplo: setando ele como private ou public 
+8. Classe Abstrata: classe que pode ser extendida por outras classe já contendo metodos e dados obrigatorios e que precisam ser implementados
+9. Typecast/Casting: forma de alterar o esqueleto de um objeto para outra forma de esqueleto: exemplo: (Integer)2L
+10. Coleções: Uma coleção é uma lista de objetos
