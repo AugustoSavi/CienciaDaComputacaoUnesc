@@ -18,14 +18,8 @@ public class CardapioServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Collection<String> opcao= Arrays.asList(request.getParameterValues("opcao"));
-        int sum = 0;
-        for (String t : opcao) {
-            int i = Integer.valueOf(t);
-            sum += i;
-        }
-        System.out.println(sum);
+        Integer sum = opcao.stream().mapToInt(Integer::valueOf).sum();
         PrintWriter out = response.getWriter();
         out.println("soma:"+sum);
-
     }
 }
