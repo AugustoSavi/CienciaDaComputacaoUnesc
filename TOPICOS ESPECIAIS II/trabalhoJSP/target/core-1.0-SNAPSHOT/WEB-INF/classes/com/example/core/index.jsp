@@ -5,7 +5,6 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "hello from jsp" %>
-</h1>
+<h1><%= "hello from jsp" %></h1>
 </body>
 </html>
