@@ -5,6 +5,7 @@ m = coeficiente angular
 > conversão de cartesiana para polar
 r² = x² + y²
 m = y/x
+angulo= tangente inversa
 
 > conversão de polar para cartesiana
 x = R*cos(angulo)
