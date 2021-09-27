@@ -1,0 +1,2 @@
+Tema: Diagnóstico de anomalias para prevenção de acidentes em Reatores nucleares
+Shell utilizada: Java Expert System Shell (JESS)
