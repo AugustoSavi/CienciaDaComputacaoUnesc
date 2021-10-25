@@ -77,14 +77,21 @@ verifyArgs(hosts,users_path,passs_path)
 puts "Users list size: #{@users.length()}"
 puts "Passwords list size: #{@passwords.length()}"
 
-@users.each do |user|
-  @passwords.each do |password|
-    sleep(0.1)
-    @threads << Thread.new { attack_ssh(hosts, user, password) }
-  end 
-end
+# @users.each do |user|
+#   @passwords.each do |password|
+#     sleep(0.1)
+#     @threads << Thread.new { attack_ssh(hosts, user, password) }
+#   end 
+# end
 
-@threads.each { |thr| thr.join }
+# @threads.each { |thr| thr.join }
 
-puts "accepts #{@accepts.length()}"
-@accepts.each { |accept| puts accept }
+# puts "accepts #{@accepts.length()}"
+# @accepts.each { |accept| puts accept }
+
+pool = ThreadPool.new(size: 2)
+
+pool.schedule do
+  attack_ssh(hosts, user, password)
+
+pool.shutdown

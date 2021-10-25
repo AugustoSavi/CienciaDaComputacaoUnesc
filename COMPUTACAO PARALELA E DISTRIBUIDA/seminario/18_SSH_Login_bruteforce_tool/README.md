@@ -1,8 +1,10 @@
-<div align="center">Usage</div>
+<h1 align="center">SSH BruteForce</h1>
 
-[MultiThread](MultiThread/README.md)
-[SingleThread](SingleThread/README.md)
-[PoolThread](PoolThread/README.md)
+[MultiThread](MultiThread)
+
+[SingleThread](SingleThread)
+
+[PoolThread](PoolThread)
 
 
 ## How to execute
