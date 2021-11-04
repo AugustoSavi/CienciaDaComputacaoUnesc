@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-# KING SABRI | @KINGSABRI
 # AUGUSTO SAVI | @Augusto_Savi
 
 require 'net/ssh'

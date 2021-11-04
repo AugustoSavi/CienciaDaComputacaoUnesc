@@ -6,8 +6,12 @@
 
 [PoolThread](PoolThread)
 
+## :information_source: Requisitos
+[Ruby](https://www.ruby-lang.org/pt/)
 
-## How to execute
+[concurrent-ruby](https://github.com/ruby-concurrency/concurrent-ruby) (to execute PoolThread)
+
+## :information_source: How to execute
 ```
 // Access the dir you want, exemple:
 cd MultiThread
@@ -16,4 +20,3 @@ cd MultiThread
 ruby bruteForceSSH.rb <host> <path_to_user_list> <path_to_user_password>
 
 ```
-

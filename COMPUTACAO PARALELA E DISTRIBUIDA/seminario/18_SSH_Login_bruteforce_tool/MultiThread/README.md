@@ -1,6 +1,5 @@
 <div align="center"> BRUTE FORCE SSH MULTITHREAD</div>
 
-> SSH gratuito usado para teste: [https://sshbrasil.com.br/sshgratis/](https://sshbrasil.com.br/sshgratis/)
 
 Caso      |Users      | Passwords | time
 --------- | --------- | ------    | ------
