@@ -64,18 +64,18 @@
  :watch:  Carga Horária
 </h2>
 
-Carga Horária Obrigatória: 3.000h
-Carga Horária Concluída: 1.920h
-Carga Horária Faltante: 1.080h
+- Carga Horária Obrigatória: 3.000h
+- Carga Horária Concluída: 1.920h
+- Carga Horária Faltante: 1.080h
 
 
 <h2 align="center">
  :watch:  Carga Horária Complementar
 </h2>
 
-Carga Horária Complementar Obrigatória: 180h
-Carga Horária Complementar Realizada: 104h
-Carga Horária Complementar Faltante: 76h
+- Carga Horária Complementar Obrigatória: 180h
+- Carga Horária Complementar Realizada: 104h
+- Carga Horária Complementar Faltante: 76h
 
 
 <h2 align="center">
