@@ -39,24 +39,25 @@
 - [X] Redes de Computadores
 - [X] Empreendedorismo
 - [ ] Compiladores
-- [ ] Trabalho de Conclusão de Curso - TCC II
 - [ ] Gestão de Sistemas de Informação
 - [ ] Optativa I
+- [ ] Optativa II
 - [ ] Tópicos Especiais III
+- [ ] Trabalho de Conclusão de Curso - TCC I
+- [ ] Trabalho de Conclusão de Curso - TCC II
 - [ ] Trabalho de Conclusão de Curso - TCC III
-- [ ] Optativa
+
 
 <h3 align="center">
  Cursando semestre 2021/2
 </h3>
 
-- [ ] Projeto Interdisciplinar da Computação II
-- [ ] Computação Paralela e Distribuída
-- [ ] Computação Gráfica
+- [x] Projeto Interdisciplinar da Computação II
+- [x] Computação Paralela e Distribuída
+- [x] Computação Gráfica
+- [x] Administração Empresarial
+- [x] Tópicos Especiais II
 - [ ] Inteligência Artificial
-- [ ] Administração Empresarial
-- [ ] Trabalho de Conclusão de Curso - TCC I
-- [ ] Tópicos Especiais II
 
 
 <h2 align="center">
@@ -67,6 +68,16 @@ Carga Horária Obrigatória: 3.000h
 Carga Horária Concluída: 1.920h
 Carga Horária Faltante: 1.080h
 
+
+<h2 align="center">
+ :watch:  Carga Horária Complementar
+</h2>
+
+Carga Horária Complementar Obrigatória: 180h
+Carga Horária Complementar Realizada: 104h
+Carga Horária Complementar Faltante: 76h
+
+
 <h2 align="center">
  :exclamation: ATENÇÃO :exclamation:
 </h2>
@@ -75,6 +86,3 @@ Carga Horária Faltante: 1.080h
 Algumas das atividades postadas não estão totalmente corretas, então antes de dar somente seu ctrl+c ctrl+v de uma conferida e
 estou disponibilizando aos poucos e a maneira que vou encontrando e fazendo as atividades que desenvolvi no curso
 </h3>
-
-
-
