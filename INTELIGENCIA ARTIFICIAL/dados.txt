@@ -1,0 +1,17 @@
+-Tema
+Moderação de conteúdo com Machine learning
+
+-Equipe
+Augusto Savi
+
+-Apresentação vídeo
+https://youtu.be/4paW3D_KJjs
+
+
+-Código dos Projetos
+https://github.com/Jean1dev/classificador-imagem-publisher
+https://github.com/AugustoSavi/spring-boot-aws-rekognition
+
+
+-Link apresentação slide
+https://github.com/AugustoSavi/CienciaDaComputacaoUnesc/blob/master/INTELIGENCIA%20ARTIFICIAL/trabalhoMachineLearning.md

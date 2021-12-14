@@ -28,7 +28,7 @@
 - [X] Tópicos Especiais I
 - [X] Banco de Dados I
 - [X] Engenharia de Software I
-- [x] Linguagens Formais
+- [X] Linguagens Formais
 - [X] Comunicação de Dados
 - [X] Teoria da Computação
 - [X] Sistemas Operacionais
@@ -38,6 +38,12 @@
 - [X] Engenharia de Software II
 - [X] Redes de Computadores
 - [X] Empreendedorismo
+- [X] Projeto Interdisciplinar da Computação II
+- [X] Computação Paralela e Distribuída
+- [X] Computação Gráfica
+- [X] Administração Empresarial
+- [X] Tópicos Especiais II
+- [X] Inteligência Artificial
 - [ ] Compiladores
 - [ ] Gestão de Sistemas de Informação
 - [ ] Optativa I
@@ -49,15 +55,8 @@
 
 
 <h3 align="center">
- Cursando semestre 2021/2
+ Cursando semestre 2022/1
 </h3>
-
-- [x] Projeto Interdisciplinar da Computação II
-- [x] Computação Paralela e Distribuída
-- [x] Computação Gráfica
-- [x] Administração Empresarial
-- [x] Tópicos Especiais II
-- [ ] Inteligência Artificial
 
 
 <h2 align="center">
@@ -74,9 +73,9 @@
 </h2>
 
 - Carga Horária Complementar Obrigatória: 180h
-- Carga Horária Complementar Realizada: 104h
-- Carga Horária Complementar Faltante: 76h
-
+- Carga Horária Complementar Realizada: 164h
+- Carga Horária Complementar Faltante: 16h
+- Porcentagem Conluida: 91,11%
 
 <h2 align="center">
  :exclamation: ATENÇÃO :exclamation:
