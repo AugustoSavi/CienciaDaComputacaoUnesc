@@ -1,0 +1,56 @@
+4. Levantamento de dados sobre a Empresa:
+
+• Razão social, Nome fantasia
+	UNIVERSIDADE DO EXTREMO SUL CATARINENSE - UNESC
+
+• Endereço
+	Av. Universitária, 1105 - Universitário, Criciúma - SC, 88806-000
+
+• Área de negócio
+	Atua na área de educação
+
+• Produtos e serviços (o que a empresa entrega a seus clientes)
+	
+• Abrangência de atuação
+	regional
+
+• Missão, Visão, Princípios e Valores
+	Na gestão universitária, buscamos:
+		Gestão democrática, participativa, transparente e descentralizada.
+		Qualidade, coerência e eficácia nos processos e nas ações.
+		Racionalidade na utilização dos recursos.
+		Valorização e capacitação dos profissionais.
+		Justiça, equidade, harmonia e disciplina nas relações de trabalho.
+		Compromisso sócio-ambiental.
+		Respeito à biodiversidade, à diversidade étnico-ideológico-cultural e aos valores humanos.
+	
+	Nas atividades de Ensino, Pesquisa e Extensão, primamos por:
+		Excelência na formação integral do cidadão.
+		Universalidade de campos de conhecimento.
+		Flexibilidade de métodos e concepções pedagógicas.
+		Equilíbrio nas dimensões acadêmicas.
+		Inserção na comunidade.
+
+	Como profissionais, devemos:
+		Ser comprometidos com a missão, princípios, valores e objetivos da Instituição.
+		Tratar as pessoas com atenção, respeito, empatia e compreensão.
+		Desempenhar as funções com ética, competência e responsabilidade.
+		Fortalecer o trabalho em equipe.
+		Ser comprometidos com a própria formação
+
+• Organograma
+• Planejamento estratégico (opcional)
+
+5. Levantamento de dados da Área funcional e Atividade
+• Nome da área, Responsável
+	Educação
+• Atividade selecionada
+	Matricula
+• Principais decisões tomadas da atividade
+• As regras de negócio da atividade – fluxo da atividade
+• Os principais dados e informações inseridos/usados/gerados na atividade
+• Problemas frequentes na atividade relacionadas à informação
+
+
+Atividade
+• Considerar os principais dados para elaboração, conforme slide 29
