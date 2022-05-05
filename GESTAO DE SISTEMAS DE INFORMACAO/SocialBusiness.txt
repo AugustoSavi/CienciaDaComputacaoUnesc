@@ -1,0 +1,40 @@
+1. Selecionar
+– Uma solução: Redes Sociais/Mídias Sociais
+
+– Uma ferramenta/ plataforma: Youtube
+
+2. Pesquisar e descrever sobre a solução:
+- O que é: Live no YouTube
+
+- benefícios de uso em empresas: 
+    Alto Volume de Tráfego.
+    Marketing Viral.
+    Rankings do Google.
+    Integração de Marketing de Mídia Social.
+    acesso Mundial.
+
+3. Pesquisar e descrever sobre a ferramenta/plataforma:
+- Nome:YouTube 
+- Descrição: YouTube é uma plataforma de criação/distribuição de lives e vídeos com sede em San Bruno, Califórnia. O serviço foi criado por três ex-funcionários do PayPal em fevereiro de 2005.
+- Funcionalidades: Contem as funcionalidades de uma midia social tradicional(Curtir,Compartilhar,comentar...) mas também a opção
+    de edição de vídeos online e exibição de lives...
+- Link: https://www.youtube.com/
+- Empresa: Google
+
+4. Pesquisar e descrever um case com uso da solução/ferramenta/plataforma:
+#BethaLive | Educação: Novas estratégias para o ensino remoto
+O propósito: apresentação de novas funcionalidades para o ensino remoto
+
+resultado: acertamos no briefing colhido durante o planejamento do desenvolvimento 
+e colhemos feedback de outros topicos que os usuarios tinham interesse
+
+5. Identificar recursos de SI
+Quais recursos são necessários para a implementação da ferramenta na situação
+(hardware, software, rede, dados e pessoas) 
+- Computador medio
+- mic
+- camera
+- Internet
+- Conta Google
+- conta youtube
+- obs/Streamlabs
