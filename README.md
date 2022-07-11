@@ -44,20 +44,19 @@
 - [X] Administração Empresarial
 - [X] Tópicos Especiais II
 - [X] Inteligência Artificial
+- [X] Compiladores
+- [X] Gestão de Sistemas de Informação
+- [X] Trabalho de Conclusão de Curso - TCC I
+- [ ] Trabalho de Conclusão de Curso - TCC II
+- [ ] Trabalho de Conclusão de Curso - TCC III
 - [ ] Optativa I
 - [ ] Optativa II
 - [ ] Tópicos Especiais III
-- [ ] Trabalho de Conclusão de Curso - TCC II
-- [ ] Trabalho de Conclusão de Curso - TCC III
-
 
 <h3 align="center">
- Cursando semestre 2022/1
+ Cursando semestre 2022/2
 </h3>
 
-- [ ] Compiladores
-- [ ] Gestão de Sistemas de Informação
-- [ ] Trabalho de Conclusão de Curso - TCC I
 
 <h2 align="center">
  :watch:  Carga Horária
