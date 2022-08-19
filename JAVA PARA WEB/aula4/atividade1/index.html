@@ -1,0 +1,128 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SuperHeroes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <div class="card border-0 shadow rounded-3 my-5">
+                    <div class="card-body p-4 p-sm-5">
+                        <h1 class="font-weight-normal mb-4 text-center">Alterego heroes</h1>
+                        <ul id="list-alter-ego" class="list-group"></ul>
+                    </div>
+
+                    <div class="card-body p-4 p-sm-5">
+                        <h1 class="font-weight-normal mb-4 text-center">Total Caracteres Marvel</h1>
+                        <ul id="list-total-caracteres-marvel" class="list-group"></ul>
+                    </div>
+
+                    <div class="card-body p-4 p-sm-5">
+                        <h1 class="font-weight-normal mb-4 text-center">Personagens DC</h1>
+                        <ul id="list-personagens-dc" class="list-group"></ul>
+                    </div>
+
+                    <div class="card-body p-4 p-sm-5">
+                        <h1 class="font-weight-normal mb-4 text-center">Heroes Ordenados</h1>
+                        <ul id="list-ordenados" class="list-group"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    let superheroes;
+
+    function init(){
+        fetch("https://akabab.github.io/superhero-api/api/all.json")
+        .then(T => T.json())
+        .then(superheroes => {
+            this.superheroes = superheroes;
+        })
+        .finally(callbackInit);
+    }
+
+    function callbackInit(){
+        alterEgoPersonagens().map(addAlterEgoListElement);
+        addtotalCaracteresMarvelElement(totalCaracteresMarvel());
+        personagensDC().map(addPersonagemDCElement);
+        ordenarPorNome().map(addHeroOrdenadoElement);
+    }
+
+    // Usando map, crie uma lista com o alter_ego de todos os personagens
+    function alterEgoPersonagens(){
+        return this.superheroes.map(superhero => superhero.biography.alterEgos  !== 'No alter egos found.' ? superhero.biography.alterEgos : null).filter(n => n);
+    }
+
+    // Usando reduce, retorne o tamanho total de caracteres de todos os first_appearance cujo o publisher é igual a "Marvel Comics"
+    function totalCaracteresMarvel(){
+        return this.superheroes.reduce((total, superhero) => {
+            if(superhero.biography.publisher === "Marvel Comics"){
+                return total + superhero.biography.firstAppearance.length;
+            }
+            return total;
+        }, 0);
+    }
+
+    // Usando filter, imprima a lista apenas de personagens cujo o publisher é "DC Comics"
+    function personagensDC(){
+        return this.superheroes.filter(superhero => superhero.biography.publisher == "DC Comics");
+    }
+
+    // Usando sort, organize o vetor pelo tamanho do nome dos personagens(superhero)
+    function ordenarPorNome(){
+        return this.superheroes.sort((a, b) => {
+            if(a.name.length > b.name.length){
+                return 1;
+            }
+            if(a.name.length < b.name.length){
+                return -1;
+            }
+            return 0;
+        });
+    }
+
+    function addAlterEgoListElement(alterEgo) {
+        let ul = document.getElementById("list-alter-ego");
+        var li = document.createElement("li");
+        li.setAttribute("class", "list-group-item text-center");
+        li.appendChild(document.createTextNode(`${alterEgo}`));
+        ul.appendChild(li);
+    }
+
+    function addtotalCaracteresMarvelElement(totalCaracteresMarvel) {
+        let ul = document.getElementById("list-total-caracteres-marvel");
+        var li = document.createElement("li");
+        li.setAttribute("class", "list-group-item text-center");
+        li.appendChild(document.createTextNode(`tamanho total de caracteres de todos os first_appearance cujo o publisher é igual a "Marvel Comics": ${totalCaracteresMarvel}`));
+        ul.appendChild(li);
+    }
+
+    function addPersonagemDCElement(personagenDC) {
+        let ul = document.getElementById("list-personagens-dc");
+        var li = document.createElement("li");
+        li.setAttribute("class", "list-group-item text-center");
+        li.appendChild(document.createTextNode(`${personagenDC.name}`));
+        ul.appendChild(li);
+    }
+
+    function addHeroOrdenadoElement(hero) {
+        let ul = document.getElementById("list-ordenados");
+        var li = document.createElement("li");
+        li.setAttribute("class", "list-group-item text-center");
+        li.appendChild(document.createTextNode(`${hero.name}`));
+        ul.appendChild(li);
+    }
+
+    init();
+
+</script>
+
+</html>
