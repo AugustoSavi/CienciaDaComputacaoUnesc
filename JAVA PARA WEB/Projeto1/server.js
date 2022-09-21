@@ -11,18 +11,20 @@ const fileOptions = {
     root: path.join(__dirname)
 };
 
+let heroes;
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 
 // Pagina inicial
-app.get('/', function (req, res) {
+app.get('/home', function (req, res) {
     res.sendFile(`${PUBLIC_PATH}/index.html`, fileOptions);
 });
 
 // Pagina de login
-app.get('/login', function (req, res) {
+app.get('/', function (req, res) {
     res.sendFile(`${PUBLIC_PATH}/login.html`, fileOptions);
 });
 
@@ -34,6 +36,14 @@ app.post('/login', cookieLoginHandler, function (req, res) {
 app.get('/cadastro-personagens', getCookie, function (req, res) {
     res.sendFile(`${PUBLIC_PATH}/cadastro-personagens.html`, fileOptions);
 });
+
+app.get('/game', getCookie, function (req, res) {
+    res.sendFile(`${PUBLIC_PATH}/game.html`, fileOptions);
+});
+
+app.get('/game/cartas', getCookie, function (req, res) {
+    res.send(getVinteCartas());
+})
 
 // paginas forbidden
 app.get('*', function (req, res) {
@@ -91,4 +101,23 @@ function getCookie(req, res, next) {
     } else {
         res.sendFile(`${PUBLIC_PATH}/login.html`, fileOptions);
     }
+}
+
+function getVinteCartas(){
+    let cartasSorteadas = [];
+
+    do {
+        cartasSorteadas.push(heroes[Math.floor(Math.random() * heroes.length)]);
+        
+        cartasSorteadas = cartasSorteadas.reduce((acc, current) => {
+            const x = acc.find(item => item.id === current.id);
+            if (!x) {
+              return acc.concat([current]);
+            } else {
+              return acc;
+            }
+        }, []);
+    } while(cartasSorteadas.length < 20);
+
+    return cartasSorteadas;
 }
