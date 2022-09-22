@@ -47,8 +47,15 @@ app.get('/game/cartas', getCookie, function (req, res) {
 });
 
 app.post('/game/ganhador', getCookie, function (req, res) {
-    console.log(req.body);
-    res.status(200);
+    console.log(ganhadoresDaRodada.length);
+
+    if (ganhadoresDaRodada.length < 9) {
+        ganhadoresDaRodada.push(req.body);
+        res.status(200).end();
+    }
+    else {
+        return verificarGanhador(res);
+    }
 })
 
 // paginas forbidden
@@ -61,6 +68,26 @@ app.listen(PORT, function () {
     console.log(`server started: http://localhost:${PORT}`);
     initHeroes();
 });
+
+
+function verificarGanhador(res){
+    let numeroVitoriasPlayerOne = ganhadoresDaRodada.filter(ganhador => ganhador.ganhador === 0).length;
+    let numeroVitoriasPlayerTwo = ganhadoresDaRodada.filter(ganhador => ganhador.ganhador === 1).length;
+    let numeroEmplates= ganhadoresDaRodada.filter(ganhador => ganhador.ganhador === 2).length;
+
+    console.log(numeroVitoriasPlayerOne, numeroVitoriasPlayerTwo, numeroEmplates);
+
+    if (numeroVitoriasPlayerOne > numeroVitoriasPlayerTwo){
+        console.log("player one ganhou");
+        return res.sendFile(`${PUBLIC_PATH}/jogador-numero-one-ganhou.html`, fileOptions);     
+    } else if (numeroVitoriasPlayerTwo > numeroVitoriasPlayerOne){
+        console.log("player two ganhou");
+        return res.sendFile(`${PUBLIC_PATH}/jogador-numero-two-ganhou.html`, fileOptions);     
+    } else if ((numeroEmplates > numeroVitoriasPlayerOne && numeroEmplates > numeroVitoriasPlayerTwo) || numeroVitoriasPlayerOne === numeroVitoriasPlayerTwo){
+        console.log("empate ganhou");
+        return res.sendFile(`${PUBLIC_PATH}/houve-mais-empate.html`, fileOptions);     
+    }
+}
 
 function isValidUser({ usuario, senha }) {
     if (usuario && senha) {
@@ -109,34 +136,34 @@ function getCookie(req, res, next) {
     }
 }
 
-function getVinteCartas(){
-    let cartasSorteadas = [[],[]];
+function getVinteCartas() {
+    let cartasSorteadas = [[], []];
 
     do {
         cartasSorteadas[0].push(heroes[Math.floor(Math.random() * heroes.length)]);
-        
+
         cartasSorteadas[0] = cartasSorteadas[0].reduce((acc, current) => {
             const x = acc.find(item => item.id === current.id);
             if (!x) {
-              return acc.concat([current]);
+                return acc.concat([current]);
             } else {
-              return acc;
+                return acc;
             }
         }, []);
-    } while(cartasSorteadas[0].length < 10);
+    } while (cartasSorteadas[0].length < 10);
 
     do {
         cartasSorteadas[1].push(heroes[Math.floor(Math.random() * heroes.length)]);
-        
+
         cartasSorteadas[1] = cartasSorteadas[1].reduce((acc, current) => {
             const x = acc.find(item => item.id === current.id);
             if (!x) {
-              return acc.concat([current]);
+                return acc.concat([current]);
             } else {
-              return acc;
+                return acc;
             }
         }, []);
-    } while(cartasSorteadas[1].length < 10);
+    } while (cartasSorteadas[1].length < 10);
 
     return cartasSorteadas;
 }
