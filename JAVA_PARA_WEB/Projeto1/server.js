@@ -6,7 +6,7 @@ var path = require('path');
 
 const app = express();
 const PORT = 5000;
-const PUBLIC_PATH = 'public';
+const PUBLIC_PATH = 'views';
 const fileOptions = {
     root: path.join(__dirname)
 };
@@ -18,6 +18,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
+
+app.set('views', __dirname + '/views');
+app.engine('html', require('ejs').renderFile);
 
 // Pagina inicial
 app.get('/home', function (req, res) {
@@ -54,9 +57,27 @@ app.post('/game/ganhador', getCookie, function (req, res) {
         res.status(200).end();
     }
     else {
-        return verificarGanhador(res);
+        res.status(403).end();
     }
-})
+});
+
+app.get('/game/ganhador', getCookie, function (req, res) {
+    console.log(`${PUBLIC_PATH}/${getFileGanhador()}`);
+    res.send({rota:`/game/${getFileGanhador()}`});
+});
+
+app.get('/game/jogador-numero-one-ganhou', getCookie, function (req, res) {
+    res.sendFile(`${PUBLIC_PATH}/jogador-numero-one-ganhou.html`, fileOptions);
+});
+
+app.get('/game/jogador-numero-two-ganhou', getCookie, function (req, res) {
+    res.sendFile(`${PUBLIC_PATH}/jogador-numero-two-ganhou.html`, fileOptions);
+});
+
+app.get('/game/houve-mais-empate', getCookie, function (req, res) {
+    res.sendFile(`${PUBLIC_PATH}/houve-mais-empate.html`, fileOptions);
+});
+
 
 // paginas forbidden
 app.get('*', function (req, res) {
@@ -70,22 +91,19 @@ app.listen(PORT, function () {
 });
 
 
-function verificarGanhador(res){
+function getFileGanhador() {
     let numeroVitoriasPlayerOne = ganhadoresDaRodada.filter(ganhador => ganhador.ganhador === 0).length;
     let numeroVitoriasPlayerTwo = ganhadoresDaRodada.filter(ganhador => ganhador.ganhador === 1).length;
-    let numeroEmplates= ganhadoresDaRodada.filter(ganhador => ganhador.ganhador === 2).length;
+    let numeroEmplates = ganhadoresDaRodada.filter(ganhador => ganhador.ganhador === 2).length;
 
     console.log(numeroVitoriasPlayerOne, numeroVitoriasPlayerTwo, numeroEmplates);
 
-    if (numeroVitoriasPlayerOne > numeroVitoriasPlayerTwo){
-        console.log("player one ganhou");
-        return res.sendFile(`${PUBLIC_PATH}/jogador-numero-one-ganhou.html`, fileOptions);     
-    } else if (numeroVitoriasPlayerTwo > numeroVitoriasPlayerOne){
-        console.log("player two ganhou");
-        return res.sendFile(`${PUBLIC_PATH}/jogador-numero-two-ganhou.html`, fileOptions);     
-    } else if ((numeroEmplates > numeroVitoriasPlayerOne && numeroEmplates > numeroVitoriasPlayerTwo) || numeroVitoriasPlayerOne === numeroVitoriasPlayerTwo){
-        console.log("empate ganhou");
-        return res.sendFile(`${PUBLIC_PATH}/houve-mais-empate.html`, fileOptions);     
+    if (numeroVitoriasPlayerOne > numeroVitoriasPlayerTwo) {
+        return 'jogador-numero-one-ganhou';
+    } else if (numeroVitoriasPlayerTwo > numeroVitoriasPlayerOne) {
+        return 'jogador-numero-two-ganhou';
+    } else if ((numeroEmplates > numeroVitoriasPlayerOne && numeroEmplates > numeroVitoriasPlayerTwo) || numeroVitoriasPlayerOne === numeroVitoriasPlayerTwo) {
+        return 'houve-mais-empate';
     }
 }
 

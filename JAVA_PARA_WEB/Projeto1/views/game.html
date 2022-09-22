@@ -18,6 +18,11 @@
         <h1 class="font-weight-normal mb-6 text-center mt-2">Selecione player
           <span id="player-que-vai-jogar" class="badge text-bg-success">0</span>
         </h1>
+
+        <h2 class="font-weight-normal mb-6 text-center mt-2">rodada
+          <span id="rodada-game" class="badge text-bg-primary">1</span>
+        </h2>
+
         <div class="col">
           <div class="card" style="width: 18rem;">
             <img id="hero-image-0" height="480" width="480"
@@ -100,11 +105,14 @@
 <script>
   let cartas = [];
   let index = 0;
+  let DISABLED_POWER_SELECT = false;
+  let RODADA_GAME = 1;
   const PLAYER_ONE = 0;
   const PLAYER_TWO = 1;
   const EMPATE = 2;
   const HABILIDADE = 0;
   const PODER = 1;
+
 
   function init() {
     fetch("http://localhost:5000/game/cartas")
@@ -134,48 +142,60 @@
     let powerstatsPlayerOne = parseInt(this.cartas[PLAYER_ONE][index].powerstats[habilidade[HABILIDADE]]);
     let powerstatsPlayerTwo = parseInt(this.cartas[PLAYER_TWO][index].powerstats[habilidade[HABILIDADE]]);
 
-    if (powerstatsPlayerOne > powerstatsPlayerTwo) {
-      console.log("ganhador: ", PLAYER_ONE);
-      sendGanhador(PLAYER_ONE);
-    } else if (powerstatsPlayerOne === powerstatsPlayerTwo) {
-      console.log("ganhador: ", EMPATE);
-      sendGanhador(EMPATE);
-    } else if (powerstatsPlayerTwo > powerstatsPlayerOne) {
-      console.log("ganhador: ", PLAYER_TWO);
-      sendGanhador(PLAYER_TWO);
-    }
+    if (!DISABLED_POWER_SELECT) {
+      if (powerstatsPlayerOne > powerstatsPlayerTwo) {
+        console.log("ganhador: ", PLAYER_ONE);
+        sendGanhador(PLAYER_ONE);
+      } else if (powerstatsPlayerOne === powerstatsPlayerTwo) {
+        console.log("ganhador: ", EMPATE);
+        sendGanhador(EMPATE);
+      } else if (powerstatsPlayerTwo > powerstatsPlayerOne) {
+        console.log("ganhador: ", PLAYER_TWO);
+        sendGanhador(PLAYER_TWO);
+      }
 
-    await mostrarAsDuasCartas();
+      await mostrarAsDuasCartas();
 
-    if (index < 9) {
-      index++;
-      setStatusParaOsDoisHero();
-    }
-    else {
-      return;
+      if (index < 9) {
+        index++;
+        setStatusParaOsDoisHero();
+      }
+      else {
+        fetch("http://localhost:5000/game/ganhador")
+        .then(T => T.json())
+        .then(result => {
+          window.location.replace(`http://localhost:5000${result.rota}`);
+        });
+      }
     }
   }
 
   async function mostrarAsDuasCartas() {
-    setStatsHero(this.cartas[PLAYER_ONE][index], PLAYER_ONE);
-    setStatsHero(this.cartas[PLAYER_TWO][index], PLAYER_TWO);
+    setStatsHero(this.cartas[PLAYER_ONE][index], PLAYER_ONE, true);
+    setStatsHero(this.cartas[PLAYER_TWO][index], PLAYER_TWO, true);
     await new Promise(r => setTimeout(r, 2000));
   }
 
   function setStatusParaOsDoisHero() {
     if (!isOdd(index)) {
-      setStatsHero(this.cartas[PLAYER_ONE][index], PLAYER_ONE);
+      setStatsHero(this.cartas[PLAYER_ONE][index], PLAYER_ONE, false);
       setBlankCard(PLAYER_TWO);
       setJogadorQueVaiSelecionar(PLAYER_ONE);
     } else {
-      setStatsHero(this.cartas[PLAYER_TWO][index], PLAYER_TWO);
+      setStatsHero(this.cartas[PLAYER_TWO][index], PLAYER_TWO, false);
       setBlankCard(PLAYER_ONE);
       setJogadorQueVaiSelecionar(PLAYER_TWO);
     }
+    setRodadaDoGame();
   }
 
   function setJogadorQueVaiSelecionar(playerNumber) {
     document.getElementById("player-que-vai-jogar").textContent = playerNumber + 1;
+  }
+
+  function setRodadaDoGame(){
+    document.getElementById('rodada-game').textContent = RODADA_GAME;
+    RODADA_GAME++;
   }
 
   function setBlankCard(playerNumber) {
@@ -193,10 +213,12 @@
         strength: '',
       }
     };
-    setStatsHero(blankHero, playerNumber);
+    setStatsHero(blankHero, playerNumber, false);
   }
 
-  function setStatsHero(hero, playerNumber) {
+  function setStatsHero(hero, playerNumber, disabled) {
+    DISABLED_POWER_SELECT = disabled;
+
     document.getElementById(`hero-image-${playerNumber}`).src = hero.images.lg;
     document.getElementById(`hero-name-${playerNumber}`).textContent = hero.name;
 
@@ -220,9 +242,7 @@
       },
       body: JSON.stringify({ ganhador: ganhador }),
     })
-      .then((data) => {
-        console.log("Success:", data);
-      })
+      .then((data) => {})
       .catch((error) => {
         console.error("Error:", error);
       });
