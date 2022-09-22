@@ -23,6 +23,16 @@
           <span id="rodada-game" class="badge text-bg-primary">1</span>
         </h2>
 
+        <div class="container text-center">
+          <div class="row justify-content-center">
+            <div class="col-4">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                <label class="form-check-label" for="flexSwitchCheckChecked">Player 2 usar IA</label>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="col">
           <div class="card" style="width: 18rem;">
             <img id="hero-image-0" height="480" width="480"
@@ -140,12 +150,25 @@
 
   function initGame() {
     setStatusParaOsDoisHero();
+    setFunctionEventParaTodosOsLi();
+  }
 
+  function setFunctionEventParaTodosOsLi() {
     var elementos = document.querySelectorAll('li');
     for (let el of elementos) {
       el.onclick = function (event) {
         compararPoderes(event.target.textContent.trim().replaceAll(' ', '').split('\n'));
       }
+    }
+  }
+
+  async function jogadaDaIA() {
+    poderesHero = ['combat', 'durability', 'intelligence', 'power', 'speed', 'strength'];
+
+    if (document.getElementById("player-que-vai-jogar").textContent == (PLAYER_TWO + 1) && document.getElementById('flexSwitchCheckChecked').checked) {
+      let qualPowerEleVaiEscolher = Math.floor(Math.random() * 6);
+      await new Promise(r => setTimeout(r, 1000));
+      document.getElementById(`li-power-stats-player-${PLAYER_TWO}-${poderesHero[qualPowerEleVaiEscolher]}`).click();
     }
   }
 
@@ -200,8 +223,9 @@
     setRodadaDoGame();
   }
 
-  function setJogadorQueVaiSelecionar(playerNumber) {
+  async function setJogadorQueVaiSelecionar(playerNumber) {
     document.getElementById("player-que-vai-jogar").textContent = playerNumber + 1;
+    await jogadaDaIA();
   }
 
   function setRodadaDoGame() {
