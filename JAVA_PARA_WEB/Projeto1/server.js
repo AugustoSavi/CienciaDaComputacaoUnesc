@@ -19,9 +19,6 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 
-app.set('views', __dirname + '/views');
-app.engine('html', require('ejs').renderFile);
-
 // Pagina inicial
 app.get('/home', function (req, res) {
     res.sendFile(`${PUBLIC_PATH}/index.html`, fileOptions);
@@ -41,17 +38,18 @@ app.get('/cadastro-personagens', getCookie, function (req, res) {
     res.sendFile(`${PUBLIC_PATH}/cadastro-personagens.html`, fileOptions);
 });
 
+// Pagina Game
 app.get('/game', getCookie, function (req, res) {
     res.sendFile(`${PUBLIC_PATH}/game.html`, fileOptions);
 });
 
+// EndPoint retorna as 20 cartas
 app.get('/game/cartas', getCookie, function (req, res) {
     res.send(getVinteCartas());
 });
 
+// Endpoint para setar o ganhador 
 app.post('/game/ganhador', getCookie, function (req, res) {
-    console.log(ganhadoresDaRodada.length);
-
     if (ganhadoresDaRodada.length < 9) {
         ganhadoresDaRodada.push(req.body);
         res.status(200).end();
@@ -61,11 +59,12 @@ app.post('/game/ganhador', getCookie, function (req, res) {
     }
 });
 
+// manda a url da pagina do ganhador
 app.get('/game/ganhador', getCookie, function (req, res) {
-    console.log(`${PUBLIC_PATH}/${getFileGanhador()}`);
     res.send({rota:`/game/${getFileGanhador()}`});
 });
 
+// Retorna a pagina do ganhador
 app.get('/game/jogador-numero-one-ganhou', getCookie, function (req, res) {
     res.sendFile(`${PUBLIC_PATH}/jogador-numero-one-ganhou.html`, fileOptions);
 });
@@ -85,6 +84,7 @@ app.get('*', function (req, res) {
     res.status(403).send({ "error": "forbidden" });
 });
 
+// server
 app.listen(PORT, function () {
     console.log(`server started: http://localhost:${PORT}`);
     initHeroes();
@@ -96,8 +96,6 @@ function getFileGanhador() {
     let numeroVitoriasPlayerTwo = ganhadoresDaRodada.filter(ganhador => ganhador.ganhador === 1).length;
     let numeroEmplates = ganhadoresDaRodada.filter(ganhador => ganhador.ganhador === 2).length;
 
-    console.log(numeroVitoriasPlayerOne, numeroVitoriasPlayerTwo, numeroEmplates);
-
     if (numeroVitoriasPlayerOne > numeroVitoriasPlayerTwo) {
         return 'jogador-numero-one-ganhou';
     } else if (numeroVitoriasPlayerTwo > numeroVitoriasPlayerOne) {
@@ -107,6 +105,7 @@ function getFileGanhador() {
     }
 }
 
+// Valida o usuario
 function isValidUser({ usuario, senha }) {
     if (usuario && senha) {
         return usuario === 'root' && senha === 'unesc@1234';
@@ -114,6 +113,7 @@ function isValidUser({ usuario, senha }) {
     return false;
 }
 
+// Carrega os heroes
 function initHeroes() {
     request('https://akabab.github.io/superhero-api/api/all.json', function (error, response, body) {
         if (!error) {
@@ -123,6 +123,7 @@ function initHeroes() {
     });
 }
 
+// Cookie handler 
 function cookieLoginHandler(req, res, next) {
     if (isValidUser(req.body)) {
         setCookie(res, req.body);
