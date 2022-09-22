@@ -95,6 +95,8 @@ function getFileGanhador() {
     let numeroVitoriasPlayerOne = ganhadoresDaRodada.filter(ganhador => ganhador.ganhador === 0).length;
     let numeroVitoriasPlayerTwo = ganhadoresDaRodada.filter(ganhador => ganhador.ganhador === 1).length;
     let numeroEmplates = ganhadoresDaRodada.filter(ganhador => ganhador.ganhador === 2).length;
+    
+    ganhadoresDaRodada = [];
 
     if (numeroVitoriasPlayerOne > numeroVitoriasPlayerTwo) {
         return 'jogador-numero-one-ganhou';

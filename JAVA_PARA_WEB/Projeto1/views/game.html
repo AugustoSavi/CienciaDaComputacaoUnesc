@@ -27,31 +27,37 @@
           <div class="card" style="width: 18rem;">
             <img id="hero-image-0" height="480" width="480"
               src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/1-a-bomb.jpg"
-              class="card-img-top" alt="...">
+              class="card-img-top" alt="imagem do heroi">
             <div class="card-body text-center">
               <h5 id="hero-name-0" class="card-title">Hero name</h5>
               <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                <li id="li-power-stats-player-0-combat"
+                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
                   combat
                   <span id="power-stats-player-0-combat" class="badge text-bg-primary">0</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                <li id="li-power-stats-player-0-durability"
+                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
                   durability
                   <span id="power-stats-player-0-durability" class="badge text-bg-primary">0</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                <li id="li-power-stats-player-0-intelligence"
+                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
                   intelligence
                   <span id="power-stats-player-0-intelligence" class="badge text-bg-primary">0</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                <li id="li-power-stats-player-0-power"
+                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
                   power
                   <span id="power-stats-player-0-power" class="badge text-bg-primary">0</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                <li id="li-power-stats-player-0-speed"
+                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
                   speed
                   <span id="power-stats-player-0-speed" class="badge text-bg-primary">0</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                <li id="li-power-stats-player-0-strength"
+                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
                   strength
                   <span id="power-stats-player-0-strength" class="badge text-bg-primary">0</span>
                 </li>
@@ -64,31 +70,37 @@
           <div class="card" style="width: 18rem;">
             <img id="hero-image-1" height="480" width="480"
               src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/1-a-bomb.jpg"
-              class="card-img-top" alt="...">
+              class="card-img-top" alt="imagem do heroi">
             <div class="card-body text-center">
               <h5 id="hero-name-1" class="card-title">Hero name</h5>
               <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                <li id="li-power-stats-player-1-combat"
+                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
                   combat
                   <span id="power-stats-player-1-combat" class="badge text-bg-primary">0</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                <li id="li-power-stats-player-1-durability"
+                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
                   durability
                   <span id="power-stats-player-1-durability" class="badge text-bg-primary">0</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                <li id="li-power-stats-player-1-intelligence"
+                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
                   intelligence
                   <span id="power-stats-player-1-intelligence" class="badge text-bg-primary">0</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                <li id="li-power-stats-player-1-power"
+                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
                   power
                   <span id="power-stats-player-1-power" class="badge text-bg-primary">0</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                <li id="li-power-stats-player-1-speed"
+                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
                   speed
                   <span id="power-stats-player-1-speed" class="badge text-bg-primary">0</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                <li id="li-power-stats-player-1-strength"
+                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
                   strength
                   <span id="power-stats-player-1-strength" class="badge text-bg-primary">0</span>
                 </li>
@@ -101,7 +113,6 @@
   </div>
   </div>
 </body>
-
 <script>
   let cartas = [];
   let index = 0;
@@ -144,14 +155,14 @@
 
     if (!DISABLED_POWER_SELECT) {
       if (powerstatsPlayerOne > powerstatsPlayerTwo) {
-        console.log("ganhador: ", PLAYER_ONE);
         sendGanhador(PLAYER_ONE);
+        setColorGanhadorEmpatePerdedor(PLAYER_ONE, habilidade[HABILIDADE]);
       } else if (powerstatsPlayerOne === powerstatsPlayerTwo) {
-        console.log("ganhador: ", EMPATE);
         sendGanhador(EMPATE);
+        setColorGanhadorEmpatePerdedor(EMPATE, habilidade[HABILIDADE]);
       } else if (powerstatsPlayerTwo > powerstatsPlayerOne) {
-        console.log("ganhador: ", PLAYER_TWO);
         sendGanhador(PLAYER_TWO);
+        setColorGanhadorEmpatePerdedor(PLAYER_TWO, habilidade[HABILIDADE]);
       }
 
       await mostrarAsDuasCartas();
@@ -162,10 +173,10 @@
       }
       else {
         fetch("http://localhost:5000/game/ganhador")
-        .then(T => T.json())
-        .then(result => {
-          window.location.replace(`http://localhost:5000${result.rota}`);
-        });
+          .then(T => T.json())
+          .then(result => {
+            window.location.replace(`http://localhost:5000${result.rota}`);
+          });
       }
     }
   }
@@ -193,7 +204,7 @@
     document.getElementById("player-que-vai-jogar").textContent = playerNumber + 1;
   }
 
-  function setRodadaDoGame(){
+  function setRodadaDoGame() {
     document.getElementById('rodada-game').textContent = RODADA_GAME;
     RODADA_GAME++;
   }
@@ -230,9 +241,23 @@
     document.getElementById(`power-stats-player-${playerNumber}-strength`).textContent = hero.powerstats.strength;
   }
 
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+  async function setColorGanhadorEmpatePerdedor(ganhadorNumber, statusPower) {
+    if (ganhadorNumber === PLAYER_ONE) {
+      document.getElementById(`li-power-stats-player-${PLAYER_ONE}-${statusPower}`).classList.add('bg-success', 'text-light');
+      document.getElementById(`li-power-stats-player-${PLAYER_TWO}-${statusPower}`).classList.add('bg-danger', 'text-light');
+    } else if (ganhadorNumber === PLAYER_TWO) {
+      document.getElementById(`li-power-stats-player-${PLAYER_TWO}-${statusPower}`).classList.add('bg-success', 'text-light');
+      document.getElementById(`li-power-stats-player-${PLAYER_ONE}-${statusPower}`).classList.add('bg-danger', 'text-light');
+    } else if (ganhadorNumber === EMPATE) {
+      document.getElementById(`li-power-stats-player-${PLAYER_ONE}-${statusPower}`).classList.add('bg-warning', 'text-light');
+      document.getElementById(`li-power-stats-player-${PLAYER_TWO}-${statusPower}`).classList.add('bg-warning', 'text-light');
+    }
+
+    await new Promise(r => setTimeout(r, 2000));
+    document.getElementById(`li-power-stats-player-${PLAYER_ONE}-${statusPower}`).classList.remove('bg-success', 'bg-danger', 'bg-warning', 'text-light');
+    document.getElementById(`li-power-stats-player-${PLAYER_TWO}-${statusPower}`).classList.remove('bg-success', 'bg-danger', 'bg-warning', 'text-light');
   }
+
 
   function sendGanhador(ganhador) {
     fetch("http://localhost:5000/game/ganhador", {
@@ -242,7 +267,7 @@
       },
       body: JSON.stringify({ ganhador: ganhador }),
     })
-      .then((data) => {})
+      .then((data) => { })
       .catch((error) => {
         console.error("Error:", error);
       });
@@ -250,8 +275,9 @@
 
   function isOdd(num) { return num % 2; };
 
-
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
 </script>
-
 
 </html>
