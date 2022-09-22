@@ -12,6 +12,7 @@ const fileOptions = {
 };
 
 let heroes;
+let ganhadoresDaRodada = [];
 
 app.use(express.json());
 app.use(cookieParser());
@@ -43,6 +44,11 @@ app.get('/game', getCookie, function (req, res) {
 
 app.get('/game/cartas', getCookie, function (req, res) {
     res.send(getVinteCartas());
+});
+
+app.post('/game/ganhador', getCookie, function (req, res) {
+    console.log(req.body);
+    res.status(200);
 })
 
 // paginas forbidden
@@ -104,12 +110,12 @@ function getCookie(req, res, next) {
 }
 
 function getVinteCartas(){
-    let cartasSorteadas = [];
+    let cartasSorteadas = [[],[]];
 
     do {
-        cartasSorteadas.push(heroes[Math.floor(Math.random() * heroes.length)]);
+        cartasSorteadas[0].push(heroes[Math.floor(Math.random() * heroes.length)]);
         
-        cartasSorteadas = cartasSorteadas.reduce((acc, current) => {
+        cartasSorteadas[0] = cartasSorteadas[0].reduce((acc, current) => {
             const x = acc.find(item => item.id === current.id);
             if (!x) {
               return acc.concat([current]);
@@ -117,7 +123,20 @@ function getVinteCartas(){
               return acc;
             }
         }, []);
-    } while(cartasSorteadas.length < 20);
+    } while(cartasSorteadas[0].length < 10);
+
+    do {
+        cartasSorteadas[1].push(heroes[Math.floor(Math.random() * heroes.length)]);
+        
+        cartasSorteadas[1] = cartasSorteadas[1].reduce((acc, current) => {
+            const x = acc.find(item => item.id === current.id);
+            if (!x) {
+              return acc.concat([current]);
+            } else {
+              return acc;
+            }
+        }, []);
+    } while(cartasSorteadas[1].length < 10);
 
     return cartasSorteadas;
 }

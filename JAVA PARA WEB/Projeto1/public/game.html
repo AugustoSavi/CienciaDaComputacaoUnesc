@@ -12,30 +12,87 @@
 </head>
 
 <body class="container">
-  <div class="col-sm-12 col-md-12 col-lg-5 mx-auto">
-    <div class="card border-0 shadow rounded-4">
-      <h1 class="font-weight-normal mb-4 text-center mt-4">Selecione player 2</h1>
-      <div class="card-body p-4 p-sm-5">
-        <div class="card" style="width: 18rem;">
-          <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/1-a-bomb.jpg"
-            class="card-img-top" alt="...">
-          <div class="card-body text-center">
-            <h5 class="card-title">Card title</h5>
-            <ul class="list-group">
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Cras justo odio
-                <span class="badge text-bg-primary">14</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Dapibus ac facilisis in
-                <span class="badge text-bg-primary">2</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                Morbi leo risus
-                <span class="badge text-bg-primary">1</span>
-              </li>
-            </ul>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="col-sm-12 col-md-12 col-lg-6 mx-auto m-2">
+    <div class="container text-center border pb-2">
+      <div class="row">
+        <h1 class="font-weight-normal mb-6 text-center mt-2">Selecione player
+          <span id="player-que-vai-jogar" class="badge text-bg-success">0</span>
+        </h1>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img id="hero-image-0"
+              height="480"
+              width="480"
+              src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/1-a-bomb.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 id="hero-name-0" class="card-title">Hero name</h5>
+              <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                  combat
+                  <span id="power-stats-player-0-combat" class="badge text-bg-primary">0</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                  durability
+                  <span id="power-stats-player-0-durability" class="badge text-bg-primary">0</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                  intelligence
+                  <span id="power-stats-player-0-intelligence" class="badge text-bg-primary">0</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                  power
+                  <span id="power-stats-player-0-power" class="badge text-bg-primary">0</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                  speed
+                  <span id="power-stats-player-0-speed" class="badge text-bg-primary">0</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                  strength
+                  <span id="power-stats-player-0-strength" class="badge text-bg-primary">0</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img id="hero-image-1"
+              height="480"
+              width="480"
+              src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/1-a-bomb.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 id="hero-name-1" class="card-title">Hero name</h5>
+              <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                  combat
+                  <span id="power-stats-player-1-combat" class="badge text-bg-primary">0</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                  durability
+                  <span id="power-stats-player-1-durability" class="badge text-bg-primary">0</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                  intelligence
+                  <span id="power-stats-player-1-intelligence" class="badge text-bg-primary">0</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                  power
+                  <span id="power-stats-player-1-power" class="badge text-bg-primary">0</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                  speed
+                  <span id="power-stats-player-1-speed" class="badge text-bg-primary">0</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                  strength
+                  <span id="power-stats-player-1-strength" class="badge text-bg-primary">0</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -45,7 +102,12 @@
 </body>
 
 <script>
-  let cartas;
+  let cartas = [];
+  let index = 0;
+  const PLAYER_ONE = 0;
+  const PLAYER_TWO = 1;
+  const HABILIDADE = 0;
+  const PODER = 1;
 
   function init() {
     fetch("http://localhost:5000/game/cartas")
@@ -54,11 +116,85 @@
         this.cartas = cartas;
       })
       .finally(function () {
-        console.log(this.cartas);
-      });
+        initGame();
+      })
   }
 
   init();
+
+  function initGame() {
+    setStatusParaOsDoisHero();
+
+    var elementos = document.querySelectorAll('li');
+    for (let el of elementos) {
+      el.onclick = function (event) {
+        compararPoderes(event.target.textContent.trim().replaceAll(' ', '').split('\n'));
+      }
+    }
+  }
+
+  function compararPoderes(habilidade) {
+    let powerstatsPlayerOne = this.cartas[PLAYER_ONE][index].powerstats[habilidade[HABILIDADE]];
+    let powerstatsPlayerTwo = this.cartas[PLAYER_TWO][index].powerstats[habilidade[HABILIDADE]];
+
+    if (index < 9) {
+      index++;
+      setStatusParaOsDoisHero();
+    }
+  }
+
+  function setStatusParaOsDoisHero() {
+    if (!isOdd(index)) {
+      setStatsHero(this.cartas[PLAYER_ONE][index], PLAYER_ONE);
+      setBlankCard(PLAYER_TWO);
+      setJogadorQueVaiSelecionar(PLAYER_ONE);
+    } else {
+      setStatsHero(this.cartas[PLAYER_TWO][index], PLAYER_TWO);
+      setBlankCard(PLAYER_ONE);
+      setJogadorQueVaiSelecionar(PLAYER_TWO);
+    }
+  }
+
+  function setJogadorQueVaiSelecionar(playerNumber){
+    document.getElementById("player-que-vai-jogar").textContent = playerNumber + 1;
+  }
+
+  function setBlankCard(playerNumber){
+    const blankHero = {
+      images:{
+        lg: "https://media.istockphoto.com/photos/back-side-of-playing-card-picture-id459234653"
+      },
+      name: "----",
+      powerstats: {
+        combat: '',
+        durability: '',
+        intelligence: '',
+        power: '',
+        speed: '',
+        strength: '',
+      }
+    };
+    setStatsHero(blankHero, playerNumber);
+  }
+
+  function setStatsHero(hero, playerNumber) {
+    document.getElementById(`hero-image-${playerNumber}`).src = hero.images.lg;
+    document.getElementById(`hero-name-${playerNumber}`).textContent = hero.name;
+
+    document.getElementById(`power-stats-player-${playerNumber}-combat`).textContent = hero.powerstats.combat;
+    document.getElementById(`power-stats-player-${playerNumber}-durability`).textContent = hero.powerstats.durability;
+    document.getElementById(`power-stats-player-${playerNumber}-intelligence`).textContent = hero.powerstats.intelligence;
+    document.getElementById(`power-stats-player-${playerNumber}-power`).textContent = hero.powerstats.power;
+    document.getElementById(`power-stats-player-${playerNumber}-speed`).textContent = hero.powerstats.speed;
+    document.getElementById(`power-stats-player-${playerNumber}-strength`).textContent = hero.powerstats.strength;
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  function isOdd(num) { return num % 2; };
+
 
 </script>
 
