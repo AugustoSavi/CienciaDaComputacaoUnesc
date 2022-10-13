@@ -3,7 +3,6 @@ class ListHeroesService {
 
     constructor(heroesRepository) {
         this.heroesRepository = heroesRepository;
-        console.log("ListHeroService criado");
     }
 
     execute() {

@@ -5,7 +5,6 @@ class CreateHeroesService {
 
     constructor(heroesRepository) {
         this.heroesRepository = heroesRepository;
-        console.log("ListHeroService criado");
     }
     
     async execute({name, slug, age}) {

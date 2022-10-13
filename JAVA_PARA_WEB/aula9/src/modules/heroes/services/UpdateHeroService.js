@@ -1,3 +1,5 @@
+import AppError from "../../../shared/errors/AppError.js";
+
 class UpdateHeroService {
     heroesRepository;
 
@@ -9,7 +11,7 @@ class UpdateHeroService {
         const heroExist = await this.heroesRepository.findById(id);
         console.log(heroExist);
         if (!heroExist) {
-            return {"Error": "Hero not exists"};
+            throw new AppError('Hero não existe');
         }
         
         heroExist.name = name;

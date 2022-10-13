@@ -3,7 +3,6 @@ class ListHeroesController {
 
     constructor(listHeroesService){
         this.listHeroesService = listHeroesService;
-        console.log("ListHeroesController criado")
     }
 
     async handle(request, response) {

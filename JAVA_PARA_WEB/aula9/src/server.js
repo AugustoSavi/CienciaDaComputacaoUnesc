@@ -1,3 +1,4 @@
+import 'express-async-errors';
 import express from "express";
 import { router } from './modules/routers.js';
 import AppError from "./shared/errors/AppError.js";
@@ -8,7 +9,6 @@ const PORT = 5000;
 import "./database/index.js";
 
 app.use(express.json());
-
 app.use(router);
 
 app.use((error, request, response, next) => {
