@@ -31,6 +31,11 @@ class HeroesRepository {
         const hero = await Hero.findByIdAndUpdate(id, {name, slug, age});
         return hero
     }
+
+    async findByIdAndRemove(id){
+        const hero = await Hero.findByIdAndRemove(id);
+        return hero
+    }
 }
 
 export { HeroesRepository };

@@ -4,7 +4,8 @@ import {
     listHeroesController,
     createHeroController,
     findOneHeroesController,
-    updateHeroController
+    updateHeroController,
+    deleteHeroController
 } from "../controllers/index.js";
 
 const heroesRoutes = Router();
@@ -23,6 +24,10 @@ heroesRoutes.get("/:id", (request, response) => {
 
 heroesRoutes.put("/:id", (request, response) => {
     return updateHeroController().handle(request, response);
+});
+
+heroesRoutes.delete("/:id", (request, response) => {
+    return deleteHeroController().handle(request, response);
 });
 
 

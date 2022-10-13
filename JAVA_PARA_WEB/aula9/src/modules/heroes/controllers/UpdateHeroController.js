@@ -10,7 +10,7 @@ class UpdateHeroController {
         const {name, slug, age} = request.body;
         const hero = await this.updateHeroesService.execute(id, {name, slug, age});
 
-        return response.status(201).json(hero);
+        return response.status(200).json(hero);
     }
 }
 
