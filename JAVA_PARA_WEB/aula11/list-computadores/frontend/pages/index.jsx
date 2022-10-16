@@ -1,22 +1,37 @@
-import { useState, useEffect } from 'react'
-import { Container, Button, Col, Form, Row, Spinner } from 'react-bootstrap'
-import Table from 'react-bootstrap/Table';
-import { AiFillDelete, AiFillEdit } from 'react-icons/ai'
+import { useState, useEffect } from 'react';
+import { Container, Button, Row, Spinner, Table } from 'react-bootstrap';
+import { AiFillDelete, AiFillEdit } from 'react-icons/ai';
+import { useRouter } from 'next/router';
 import api from '../services/api';
 
 
 export default function Home() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const router = useRouter();
 
   useEffect(() => {
-    api.get('computador')
-      .then((response) => {
-        setData(response.data);
-        setLoading(false);
-      });
+    getData();
   }, []);
+
+  function getData(){
+    setLoading(true);
+    api.get('computador')
+    .then((response) => {
+      setData(response.data);
+      setLoading(false);
+    });
+  }
+
+  function handleDelete(id) {
+    api.delete(`computador/${id}`).then(() => {
+      getData();
+    });
+  }
+
+  function handleRoute(href) {
+    router.push(href)
+  }
 
   if (loading) return <Spinner />;
 
@@ -29,12 +44,10 @@ export default function Home() {
         <Container>
           <Row className='justify-content-start'>
             <Button
-              as={Col}
-              md="2"
-              title='adicionar copmutador'
+              onClick={()=> handleRoute("/computador")}
+              title='adicionar computador'
               variant="success"
-              className='mb-4'
-              onClick={() => setCadastroShow(true)}>
+              className='mb-4'>
               + Computador
             </Button>
           </Row>
@@ -64,16 +77,16 @@ export default function Home() {
                         <td className='text-center'>{computador.estado}</td>
                         <td>
                           <Button
+                            onClick={() => handleRoute(`/computador/${computador._id}`)}
                             className='mx-3'
                             title='editar registro'
-                            onClick={() => { }}
                           >
                             <AiFillEdit />
                           </Button>
                           <Button
                             variant="danger"
                             title='excluir registro'
-                            onClick={() => { }}>
+                            onClick={() => { handleDelete(computador._id) }}>
                             <AiFillDelete />
                           </Button>
                         </td>
