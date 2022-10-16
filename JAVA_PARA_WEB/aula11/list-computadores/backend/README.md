@@ -25,11 +25,7 @@
 ```bash
 curl --request POST \
   --url http://localhost:5000/computador \
-  --data '{
-	"name": "teste1",
-	"slug": "teste1",
-	"age": 123
-}'
+  --data '{"hostname":"127.0.0.1","processador":"intel core 32","memoria":" 16 gb ddr4","armazenamento":"128g ssd","estado":"desativado"}'
 ```
 
 ### 2. listar todos computadores
@@ -48,11 +44,7 @@ curl --request GET \
 ```bash
 curl --request PUT \
   --url http://localhost:5000/computador/{id} \
-  --data '{
-	"name": "teste update 1",
-	"slug": "teste update 1",
-	"age": 2
-}'
+  --data '{"_id":"{id}","hostname":"127.0.0.1","processador":"intel core 32","memoria":" 16 gb ddr4","armazenamento":"128g ssd","estado":"desativado","__v":5}'
 ```
 ### 5. Delete computador
 ```bash
