@@ -47,25 +47,25 @@
 - [X] Compiladores
 - [X] Gestão de Sistemas de Informação
 - [X] Trabalho de Conclusão de Curso - TCC I
-- [ ] Trabalho de Conclusão de Curso - TCC III
+- [X] Trabalho de Conclusão de Curso - TCC II
+- [X] Optativa I
+- [X] Optativa II
+- [X] Tópicos Especiais III
 
 <h3 align="center">
- Cursando semestre 2022/2
+ Cursando semestre 2023/1
 </h3>
-- [ ] Trabalho de Conclusão de Curso - TCC II
-- [ ] Optativa I
-- [ ] Optativa II
-- [ ] Tópicos Especiais III
 
+- [ ] Trabalho de Conclusão de Curso - TCC III
 
 <h2 align="center">
  :watch:  Carga Horária
 </h2>
 
 - Carga Horária Obrigatória: 3.000h
-- Carga Horária Concluída: 2.370h
-- Carga Horária Faltante: 630h
-- Porcentagem Concluida: 79,00%
+- Carga Horária Concluída: 2.610h
+- Carga Horária Faltante: 390h
+- Porcentagem Concluida: 87,00%
 
 <h2 align="center">
  :watch:  Carga Horária Complementar
