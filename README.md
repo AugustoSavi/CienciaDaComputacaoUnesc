@@ -72,9 +72,9 @@
 </h2>
 
 - Carga Horária Complementar Obrigatória: 180h
-- Carga Horária Complementar Realizada: 164h
-- Carga Horária Complementar Faltante: 16h
-- Porcentagem Concluida: 91,11%
+- Carga Horária Complementar Realizada: 180h
+- Carga Horária Complementar Faltante: 0h
+- Porcentagem Concluída: 100%
 
 <h2 align="center">
  :exclamation: ATENÇÃO :exclamation:
