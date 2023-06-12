@@ -63,9 +63,9 @@
 </h2>
 
 - Carga Horária Obrigatória: 3.000h
-- Carga Horária Concluída: 2.610h
-- Carga Horária Faltante: 390h
-- Porcentagem Concluida: 87,00%
+- Carga Horária Concluída: 2.790h
+- Carga Horária Faltante: 210h
+- Porcentagem Concluida: 93,00%
 
 <h2 align="center">
  :watch:  Carga Horária Complementar
