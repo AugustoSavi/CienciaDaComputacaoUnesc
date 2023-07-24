@@ -6,9 +6,9 @@
  :exclamation: ATENÇÃO :exclamation:
 </h2>
 
-<h3 align= "center">
+<p align= "center">
 Algumas das atividades postadas não estão corretas, então antes de dar somente seu ctrl+c ctrl+v de uma conferida.
-</h3>
+</p>
 
 <h3 align="center">
  As Disciplinas que estão marcadas são as que eu já obtive aprovação
