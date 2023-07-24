@@ -2,6 +2,14 @@
     :rocket: Ciencia da Computação Unesc
 </h1>
 
+<h2 align="center">
+ :exclamation: ATENÇÃO :exclamation:
+</h2>
+
+<h3 align= "center">
+Algumas das atividades postadas não estão corretas, então antes de dar somente seu ctrl+c ctrl+v de uma conferida.
+</h3>
+
 <h3 align="center">
  As Disciplinas que estão marcadas são as que eu já obtive aprovação
 </h3>
@@ -48,24 +56,20 @@
 - [X] Gestão de Sistemas de Informação
 - [X] Trabalho de Conclusão de Curso - TCC I
 - [X] Trabalho de Conclusão de Curso - TCC II
+- [X] Trabalho de Conclusão de Curso - TCC III
 - [X] Optativa I
 - [X] Optativa II
 - [X] Tópicos Especiais III
 
-<h3 align="center">
- Cursando semestre 2023/1
-</h3>
-
-- [ ] Trabalho de Conclusão de Curso - TCC III
 
 <h2 align="center">
  :watch:  Carga Horária
 </h2>
 
 - Carga Horária Obrigatória: 3.000h
-- Carga Horária Concluída: 2.790h
-- Carga Horária Faltante: 210h
-- Porcentagem Concluida: 93,00%
+- Carga Horária Concluída: 3.000h
+- Carga Horária Faltante: 0h
+- Porcentagem Concluida: 100%
 
 <h2 align="center">
  :watch:  Carga Horária Complementar
@@ -75,12 +79,3 @@
 - Carga Horária Complementar Realizada: 180h
 - Carga Horária Complementar Faltante: 0h
 - Porcentagem Concluída: 100%
-
-<h2 align="center">
- :exclamation: ATENÇÃO :exclamation:
-</h2>
-
-<h3 align= "center">
-Algumas das atividades postadas não estão totalmente corretas, então antes de dar somente seu ctrl+c ctrl+v de uma conferida e
-estou disponibilizando aos poucos e a maneira que vou encontrando e fazendo as atividades que desenvolvi no curso
-</h3>
